@@ -34,8 +34,8 @@
             this.txt_nature = new System.Windows.Forms.TextBox();
             this.cbb_nomContact_frmDspClie = new System.Windows.Forms.ComboBox();
             this.btnValiModi = new System.Windows.Forms.Button();
-            this.lblNoClient = new System.Windows.Forms.Label();
             this.btnAjou_frmDspClie = new System.Windows.Forms.Button();
+            this.lblNoClient = new System.Windows.Forms.Label();
             this.grbFiche_frmClie.SuspendLayout();
             this.grbRecherche_frmClie.SuspendLayout();
             this.SuspendLayout();
@@ -112,16 +112,6 @@
             this.btnValiModi.Text = "Valider vos modifications";
             this.btnValiModi.UseVisualStyleBackColor = true;
             // 
-            // lblNoClient
-            // 
-            this.lblNoClient.AutoSize = true;
-            this.lblNoClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoClient.Location = new System.Drawing.Point(15, 218);
-            this.lblNoClient.Name = "lblNoClient";
-            this.lblNoClient.Size = new System.Drawing.Size(659, 39);
-            this.lblNoClient.TabIndex = 46;
-            this.lblNoClient.Text = "Aucun client dans votre base de données!";
-            // 
             // btnAjou_frmDspClie
             // 
             this.btnAjou_frmDspClie.Location = new System.Drawing.Point(522, 661);
@@ -132,12 +122,22 @@
             this.btnAjou_frmDspClie.UseVisualStyleBackColor = true;
             this.btnAjou_frmDspClie.Click += new System.EventHandler(this.btnAjou_frmDspClie_Click);
             // 
+            // lblNoClient
+            // 
+            this.lblNoClient.AutoSize = true;
+            this.lblNoClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoClient.Location = new System.Drawing.Point(14, 340);
+            this.lblNoClient.Name = "lblNoClient";
+            this.lblNoClient.Size = new System.Drawing.Size(659, 39);
+            this.lblNoClient.TabIndex = 48;
+            this.lblNoClient.Text = "Aucun client dans votre base de données!";
+            // 
             // frmDspClie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(687, 718);
-            this.Controls.Add(this.btnAjou_frmDspClie);
             this.Controls.Add(this.lblNoClient);
+            this.Controls.Add(this.btnAjou_frmDspClie);
             this.Controls.Add(this.btnValiModi);
             this.Controls.Add(this.btnModiCont);
             this.Controls.Add(this.btnSupp_frmDspClie);
@@ -149,8 +149,8 @@
             this.Controls.SetChildIndex(this.btnSupp_frmDspClie, 0);
             this.Controls.SetChildIndex(this.btnModiCont, 0);
             this.Controls.SetChildIndex(this.btnValiModi, 0);
-            this.Controls.SetChildIndex(this.lblNoClient, 0);
             this.Controls.SetChildIndex(this.btnAjou_frmDspClie, 0);
+            this.Controls.SetChildIndex(this.lblNoClient, 0);
             this.grbFiche_frmClie.ResumeLayout(false);
             this.grbFiche_frmClie.PerformLayout();
             this.grbRecherche_frmClie.ResumeLayout(false);
@@ -168,7 +168,7 @@
         private System.Windows.Forms.TextBox txt_nature;
         private System.Windows.Forms.ComboBox cbb_nomContact_frmDspClie;
         private System.Windows.Forms.Button btnValiModi;
-        private System.Windows.Forms.Label lblNoClient;
         private System.Windows.Forms.Button btnAjou_frmDspClie;
+        private System.Windows.Forms.Label lblNoClient;
     }
 }

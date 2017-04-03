@@ -53,6 +53,8 @@
             this.rdb_activite_frmClie = new System.Windows.Forms.RadioButton();
             this.rdn_nomClient_frmClie = new System.Windows.Forms.RadioButton();
             this.rdb_nomClient_frmClie = new System.Windows.Forms.RadioButton();
+            this.cbb_nature = new System.Windows.Forms.ComboBox();
+            this.cbb_typeSociete = new System.Windows.Forms.ComboBox();
             this.grbFiche_frmClie.SuspendLayout();
             this.grbRecherche_frmClie.SuspendLayout();
             this.SuspendLayout();
@@ -242,7 +244,9 @@
             // 
             // grbFiche_frmClie
             // 
+            this.grbFiche_frmClie.Controls.Add(this.cbb_nature);
             this.grbFiche_frmClie.Controls.Add(this.txt_codeClient);
+            this.grbFiche_frmClie.Controls.Add(this.cbb_typeSociete);
             this.grbFiche_frmClie.Controls.Add(this.txt_telephone);
             this.grbFiche_frmClie.Controls.Add(this.txt_cA);
             this.grbFiche_frmClie.Controls.Add(this.txt_activite);
@@ -381,6 +385,31 @@
             this.rdb_nomClient_frmClie.Text = "Nom";
             this.rdb_nomClient_frmClie.UseVisualStyleBackColor = true;
             // 
+            // cbb_nature
+            // 
+            this.cbb_nature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_nature.FormattingEnabled = true;
+            this.cbb_nature.Items.AddRange(new object[] {
+            "Principale",
+            "Secondaire",
+            "Ancienne"});
+            this.cbb_nature.Location = new System.Drawing.Point(441, 106);
+            this.cbb_nature.Name = "cbb_nature";
+            this.cbb_nature.Size = new System.Drawing.Size(188, 21);
+            this.cbb_nature.TabIndex = 47;
+            // 
+            // cbb_typeSociete
+            // 
+            this.cbb_typeSociete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_typeSociete.FormattingEnabled = true;
+            this.cbb_typeSociete.Items.AddRange(new object[] {
+            "Public",
+            "Privee"});
+            this.cbb_typeSociete.Location = new System.Drawing.Point(119, 106);
+            this.cbb_typeSociete.Name = "cbb_typeSociete";
+            this.cbb_typeSociete.Size = new System.Drawing.Size(188, 21);
+            this.cbb_typeSociete.TabIndex = 46;
+            // 
             // frmClie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,5 +465,7 @@
         protected System.Windows.Forms.TextBox txt_telephone;
         protected System.Windows.Forms.TextBox txt_codeClient;
         protected System.Windows.Forms.ComboBox cbbRech_frmListClie;
+        protected System.Windows.Forms.ComboBox cbb_nature;
+        protected System.Windows.Forms.ComboBox cbb_typeSociete;
     }
 }

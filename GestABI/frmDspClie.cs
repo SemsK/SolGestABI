@@ -11,7 +11,7 @@ namespace GestABI
     /// <summary>
     /// Classe dérivée de frmClie : form de lecture et de modification des clients
     /// </summary>
-    public partial class frmDspClie : frmNewClie
+    public partial class frmDspClie : frmClie
     {
         /// <summary>
         /// Rang du client traité
@@ -68,20 +68,20 @@ namespace GestABI
             MSclient leClient = Donnees.ArrayClient[i];
             // Affiche les textbox qui sont héritées (==> base.) et les convetit en chaine
             
-            base.txt_nomClient.Text = leClient.NomClient;
-            base.txt_idClient.Text = leClient.IdClient.ToString();
+            txt_nomClient.Text = leClient.NomClient;
+            txt_idClient.Text = leClient.IdClient.ToString();
             cbb_typeSociete.Text = leClient.TypeClient;
-            base.txt_activite.Text = leClient.Activite;
-            base.txt_cA.Text = leClient.CA.ToString();
+            txt_activite.Text = leClient.Activite;
+            txt_cA.Text = leClient.CA.ToString();
             cbb_nature.Text = leClient.Nature;
-            base.txt_raisonSociale.Text = leClient.RaisonSociale;
-            base.txt_effectif.Text = leClient.Effectif.ToString();
-            base.txt_telephone.Text = leClient.Telephone;
-            base.txt_mail.Text = leClient.Mail;
-            base.txt_adresse.Text = leClient.Adresse;
-            base.txt_codeClient.Text = leClient.CodeClient;
-            base.txt_ville.Text = leClient.Ville;
-            base.txt_commClient.Text = leClient.CommClient;
+            txt_raisonSociale.Text = leClient.RaisonSociale;
+            txt_effectif.Text = leClient.Effectif.ToString();
+            txt_telephone.Text = leClient.Telephone;
+            txt_mail.Text = leClient.Mail;
+            txt_adresse.Text = leClient.Adresse;
+            txt_codeClient.Text = leClient.CodeClient;
+            txt_ville.Text = leClient.Ville;
+            txt_commClient.Text = leClient.CommClient;
         }
     }
 }

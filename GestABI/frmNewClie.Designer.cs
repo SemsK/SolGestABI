@@ -30,8 +30,6 @@
         {
             this.btnList_frmNewClie = new System.Windows.Forms.Button();
             this.btnOK_frmNewClie = new System.Windows.Forms.Button();
-            this.cbb_typeSociete = new System.Windows.Forms.ComboBox();
-            this.cbb_nature = new System.Windows.Forms.ComboBox();
             this.text_nomContact_frmClie = new System.Windows.Forms.TextBox();
             this.btnQuit_frmNewClie = new System.Windows.Forms.Button();
             this.grbBoutons_frmNewClie = new System.Windows.Forms.GroupBox();
@@ -43,10 +41,6 @@
             // grbFiche_frmClie
             // 
             this.grbFiche_frmClie.Controls.Add(this.text_nomContact_frmClie);
-            this.grbFiche_frmClie.Controls.Add(this.cbb_nature);
-            this.grbFiche_frmClie.Controls.Add(this.cbb_typeSociete);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.cbb_typeSociete, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.cbb_nature, 0);
             this.grbFiche_frmClie.Controls.SetChildIndex(this.text_nomContact_frmClie, 0);
             this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_mail, 0);
             this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_adresse, 0);
@@ -83,31 +77,6 @@
             this.btnOK_frmNewClie.Text = "OK";
             this.btnOK_frmNewClie.UseVisualStyleBackColor = true;
             this.btnOK_frmNewClie.Click += new System.EventHandler(this.btnOK_frmNewClie_Click);
-            // 
-            // cbb_typeSociete
-            // 
-            this.cbb_typeSociete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_typeSociete.FormattingEnabled = true;
-            this.cbb_typeSociete.Items.AddRange(new object[] {
-            "Public",
-            "Privee"});
-            this.cbb_typeSociete.Location = new System.Drawing.Point(119, 106);
-            this.cbb_typeSociete.Name = "cbb_typeSociete";
-            this.cbb_typeSociete.Size = new System.Drawing.Size(188, 21);
-            this.cbb_typeSociete.TabIndex = 35;
-            // 
-            // cbb_nature
-            // 
-            this.cbb_nature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_nature.FormattingEnabled = true;
-            this.cbb_nature.Items.AddRange(new object[] {
-            "Principale",
-            "Secondaire",
-            "Ancienne"});
-            this.cbb_nature.Location = new System.Drawing.Point(441, 106);
-            this.cbb_nature.Name = "cbb_nature";
-            this.cbb_nature.Size = new System.Drawing.Size(188, 21);
-            this.cbb_nature.TabIndex = 36;
             // 
             // text_nomContact_frmClie
             // 
@@ -163,8 +132,6 @@
         private System.Windows.Forms.Button btnOK_frmNewClie;
         private System.Windows.Forms.Button btnQuit_frmNewClie;
         private System.Windows.Forms.GroupBox grbBoutons_frmNewClie;
-        protected System.Windows.Forms.ComboBox cbb_typeSociete;
-        protected System.Windows.Forms.ComboBox cbb_nature;
         protected System.Windows.Forms.TextBox text_nomContact_frmClie;
     }
 }
