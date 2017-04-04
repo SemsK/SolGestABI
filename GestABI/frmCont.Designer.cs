@@ -44,17 +44,16 @@
             this.grb_possibleInter = new System.Windows.Forms.GroupBox();
             this.grb_statutProjet = new System.Windows.Forms.GroupBox();
             this.grbIntervention = new System.Windows.Forms.GroupBox();
-            this.mtb_dureeCumul = new System.Windows.Forms.MaskedTextBox();
-            this.mtb_dureeProjet = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_nomClient_frmCont = new System.Windows.Forms.Label();
+            this.txt_dureeCumul = new System.Windows.Forms.TextBox();
+            this.txt_dureeProjet = new System.Windows.Forms.TextBox();
+            this.cbb_nomProjet = new System.Windows.Forms.ComboBox();
             this.lbl_idContact = new System.Windows.Forms.Label();
             this.grbFiche_frmCont = new System.Windows.Forms.GroupBox();
-            this.mtb_nomClient_frmCont = new System.Windows.Forms.MaskedTextBox();
-            this.mtb_fonctionContact = new System.Windows.Forms.MaskedTextBox();
-            this.mtb_prenomContact = new System.Windows.Forms.MaskedTextBox();
-            this.mtb_nomContact = new System.Windows.Forms.MaskedTextBox();
-            this.mtb_telContact = new System.Windows.Forms.MaskedTextBox();
-            this.mtb_idContact = new System.Windows.Forms.MaskedTextBox();
+            this.txt_mailContact = new System.Windows.Forms.TextBox();
+            this.txt_telContact = new System.Windows.Forms.TextBox();
+            this.txt_idContact = new System.Windows.Forms.TextBox();
+            this.txt_prenomContact = new System.Windows.Forms.TextBox();
+            this.txt_nomContact = new System.Windows.Forms.TextBox();
             this.grbRecherche_frmCont = new System.Windows.Forms.GroupBox();
             this.txtRech_frmListCont = new System.Windows.Forms.TextBox();
             this.btn_lancRech_frmListCont = new System.Windows.Forms.Button();
@@ -71,7 +70,7 @@
             // lbl_nomContact
             // 
             this.lbl_nomContact.AutoSize = true;
-            this.lbl_nomContact.Location = new System.Drawing.Point(13, 37);
+            this.lbl_nomContact.Location = new System.Drawing.Point(13, 29);
             this.lbl_nomContact.Name = "lbl_nomContact";
             this.lbl_nomContact.Size = new System.Drawing.Size(35, 13);
             this.lbl_nomContact.TabIndex = 0;
@@ -80,7 +79,7 @@
             // lbl_prenomContact
             // 
             this.lbl_prenomContact.AutoSize = true;
-            this.lbl_prenomContact.Location = new System.Drawing.Point(320, 37);
+            this.lbl_prenomContact.Location = new System.Drawing.Point(320, 29);
             this.lbl_prenomContact.Name = "lbl_prenomContact";
             this.lbl_prenomContact.Size = new System.Drawing.Size(49, 13);
             this.lbl_prenomContact.TabIndex = 2;
@@ -89,7 +88,7 @@
             // lbl_telContact
             // 
             this.lbl_telContact.AutoSize = true;
-            this.lbl_telContact.Location = new System.Drawing.Point(13, 116);
+            this.lbl_telContact.Location = new System.Drawing.Point(13, 108);
             this.lbl_telContact.Name = "lbl_telContact";
             this.lbl_telContact.Size = new System.Drawing.Size(94, 13);
             this.lbl_telContact.TabIndex = 4;
@@ -98,7 +97,7 @@
             // lbl_fonctionContact
             // 
             this.lbl_fonctionContact.AutoSize = true;
-            this.lbl_fonctionContact.Location = new System.Drawing.Point(13, 76);
+            this.lbl_fonctionContact.Location = new System.Drawing.Point(13, 68);
             this.lbl_fonctionContact.Name = "lbl_fonctionContact";
             this.lbl_fonctionContact.Size = new System.Drawing.Size(54, 13);
             this.lbl_fonctionContact.TabIndex = 8;
@@ -106,7 +105,7 @@
             // 
             // txt_fonctionContact
             // 
-            this.txt_fonctionContact.Location = new System.Drawing.Point(412, 113);
+            this.txt_fonctionContact.Location = new System.Drawing.Point(108, 65);
             this.txt_fonctionContact.Name = "txt_fonctionContact";
             this.txt_fonctionContact.Size = new System.Drawing.Size(184, 20);
             this.txt_fonctionContact.TabIndex = 9;
@@ -114,7 +113,7 @@
             // lbl_mailContact
             // 
             this.lbl_mailContact.AutoSize = true;
-            this.lbl_mailContact.Location = new System.Drawing.Point(320, 116);
+            this.lbl_mailContact.Location = new System.Drawing.Point(320, 108);
             this.lbl_mailContact.Name = "lbl_mailContact";
             this.lbl_mailContact.Size = new System.Drawing.Size(72, 13);
             this.lbl_mailContact.TabIndex = 10;
@@ -215,49 +214,47 @@
             // 
             // grbIntervention
             // 
-            this.grbIntervention.Controls.Add(this.mtb_dureeCumul);
-            this.grbIntervention.Controls.Add(this.mtb_dureeProjet);
+            this.grbIntervention.Controls.Add(this.txt_dureeCumul);
+            this.grbIntervention.Controls.Add(this.txt_dureeProjet);
+            this.grbIntervention.Controls.Add(this.cbb_nomProjet);
             this.grbIntervention.Controls.Add(this.grb_possibleInter);
             this.grbIntervention.Controls.Add(this.grb_statutProjet);
             this.grbIntervention.Controls.Add(this.lbl_dureeCumul);
             this.grbIntervention.Controls.Add(this.lbl_dureeProjet);
             this.grbIntervention.Controls.Add(this.lbl_nomProjet);
-            this.grbIntervention.Location = new System.Drawing.Point(18, 314);
+            this.grbIntervention.Location = new System.Drawing.Point(18, 252);
             this.grbIntervention.Name = "grbIntervention";
             this.grbIntervention.Size = new System.Drawing.Size(611, 173);
             this.grbIntervention.TabIndex = 26;
             this.grbIntervention.TabStop = false;
             this.grbIntervention.Text = "Intervention";
             // 
-            // mtb_dureeCumul
+            // txt_dureeCumul
             // 
-            this.mtb_dureeCumul.Location = new System.Drawing.Point(460, 133);
-            this.mtb_dureeCumul.Mask = "0";
-            this.mtb_dureeCumul.Name = "mtb_dureeCumul";
-            this.mtb_dureeCumul.Size = new System.Drawing.Size(136, 20);
-            this.mtb_dureeCumul.TabIndex = 27;
+            this.txt_dureeCumul.Location = new System.Drawing.Point(460, 133);
+            this.txt_dureeCumul.Name = "txt_dureeCumul";
+            this.txt_dureeCumul.Size = new System.Drawing.Size(136, 20);
+            this.txt_dureeCumul.TabIndex = 30;
             // 
-            // mtb_dureeProjet
+            // txt_dureeProjet
             // 
-            this.mtb_dureeProjet.Location = new System.Drawing.Point(161, 133);
-            this.mtb_dureeProjet.Mask = "0";
-            this.mtb_dureeProjet.Name = "mtb_dureeProjet";
-            this.mtb_dureeProjet.Size = new System.Drawing.Size(136, 20);
-            this.mtb_dureeProjet.TabIndex = 26;
+            this.txt_dureeProjet.Location = new System.Drawing.Point(154, 133);
+            this.txt_dureeProjet.Name = "txt_dureeProjet";
+            this.txt_dureeProjet.Size = new System.Drawing.Size(136, 20);
+            this.txt_dureeProjet.TabIndex = 29;
             // 
-            // lbl_nomClient_frmCont
+            // cbb_nomProjet
             // 
-            this.lbl_nomClient_frmCont.AutoSize = true;
-            this.lbl_nomClient_frmCont.Location = new System.Drawing.Point(13, 156);
-            this.lbl_nomClient_frmCont.Name = "lbl_nomClient_frmCont";
-            this.lbl_nomClient_frmCont.Size = new System.Drawing.Size(39, 13);
-            this.lbl_nomClient_frmCont.TabIndex = 27;
-            this.lbl_nomClient_frmCont.Text = "Client :";
+            this.cbb_nomProjet.FormattingEnabled = true;
+            this.cbb_nomProjet.Location = new System.Drawing.Point(108, 26);
+            this.cbb_nomProjet.Name = "cbb_nomProjet";
+            this.cbb_nomProjet.Size = new System.Drawing.Size(488, 21);
+            this.cbb_nomProjet.TabIndex = 28;
             // 
             // lbl_idContact
             // 
             this.lbl_idContact.AutoSize = true;
-            this.lbl_idContact.Location = new System.Drawing.Point(320, 73);
+            this.lbl_idContact.Location = new System.Drawing.Point(320, 68);
             this.lbl_idContact.Name = "lbl_idContact";
             this.lbl_idContact.Size = new System.Drawing.Size(63, 13);
             this.lbl_idContact.TabIndex = 6;
@@ -265,78 +262,58 @@
             // 
             // grbFiche_frmCont
             // 
-            this.grbFiche_frmCont.Controls.Add(this.mtb_nomClient_frmCont);
-            this.grbFiche_frmCont.Controls.Add(this.mtb_fonctionContact);
-            this.grbFiche_frmCont.Controls.Add(this.mtb_prenomContact);
-            this.grbFiche_frmCont.Controls.Add(this.mtb_nomContact);
-            this.grbFiche_frmCont.Controls.Add(this.mtb_telContact);
-            this.grbFiche_frmCont.Controls.Add(this.mtb_idContact);
+            this.grbFiche_frmCont.Controls.Add(this.txt_mailContact);
+            this.grbFiche_frmCont.Controls.Add(this.txt_telContact);
+            this.grbFiche_frmCont.Controls.Add(this.txt_idContact);
+            this.grbFiche_frmCont.Controls.Add(this.txt_prenomContact);
+            this.grbFiche_frmCont.Controls.Add(this.txt_nomContact);
             this.grbFiche_frmCont.Controls.Add(this.lbl_idContact);
-            this.grbFiche_frmCont.Controls.Add(this.lbl_nomClient_frmCont);
             this.grbFiche_frmCont.Controls.Add(this.txt_fonctionContact);
             this.grbFiche_frmCont.Controls.Add(this.lbl_mailContact);
             this.grbFiche_frmCont.Controls.Add(this.lbl_fonctionContact);
             this.grbFiche_frmCont.Controls.Add(this.lbl_nomContact);
             this.grbFiche_frmCont.Controls.Add(this.lbl_prenomContact);
             this.grbFiche_frmCont.Controls.Add(this.lbl_telContact);
-            this.grbFiche_frmCont.Location = new System.Drawing.Point(18, 105);
+            this.grbFiche_frmCont.Location = new System.Drawing.Point(18, 99);
             this.grbFiche_frmCont.Name = "grbFiche_frmCont";
-            this.grbFiche_frmCont.Size = new System.Drawing.Size(611, 196);
+            this.grbFiche_frmCont.Size = new System.Drawing.Size(611, 147);
             this.grbFiche_frmCont.TabIndex = 29;
             this.grbFiche_frmCont.TabStop = false;
             // 
-            // mtb_nomClient_frmCont
+            // txt_mailContact
             // 
-            this.mtb_nomClient_frmCont.AsciiOnly = true;
-            this.mtb_nomClient_frmCont.Location = new System.Drawing.Point(108, 153);
-            this.mtb_nomClient_frmCont.Mask = "a";
-            this.mtb_nomClient_frmCont.Name = "mtb_nomClient_frmCont";
-            this.mtb_nomClient_frmCont.Size = new System.Drawing.Size(184, 20);
-            this.mtb_nomClient_frmCont.TabIndex = 36;
+            this.txt_mailContact.Location = new System.Drawing.Point(412, 105);
+            this.txt_mailContact.Name = "txt_mailContact";
+            this.txt_mailContact.Size = new System.Drawing.Size(184, 20);
+            this.txt_mailContact.TabIndex = 41;
             // 
-            // mtb_fonctionContact
+            // txt_telContact
             // 
-            this.mtb_fonctionContact.AsciiOnly = true;
-            this.mtb_fonctionContact.Location = new System.Drawing.Point(108, 70);
-            this.mtb_fonctionContact.Mask = "L";
-            this.mtb_fonctionContact.Name = "mtb_fonctionContact";
-            this.mtb_fonctionContact.Size = new System.Drawing.Size(184, 20);
-            this.mtb_fonctionContact.TabIndex = 35;
+            this.txt_telContact.Location = new System.Drawing.Point(108, 105);
+            this.txt_telContact.Name = "txt_telContact";
+            this.txt_telContact.Size = new System.Drawing.Size(184, 20);
+            this.txt_telContact.TabIndex = 40;
             // 
-            // mtb_prenomContact
+            // txt_idContact
             // 
-            this.mtb_prenomContact.AsciiOnly = true;
-            this.mtb_prenomContact.Location = new System.Drawing.Point(412, 34);
-            this.mtb_prenomContact.Mask = "L<";
-            this.mtb_prenomContact.Name = "mtb_prenomContact";
-            this.mtb_prenomContact.Size = new System.Drawing.Size(184, 20);
-            this.mtb_prenomContact.TabIndex = 34;
+            this.txt_idContact.Location = new System.Drawing.Point(412, 65);
+            this.txt_idContact.Name = "txt_idContact";
+            this.txt_idContact.Size = new System.Drawing.Size(184, 20);
+            this.txt_idContact.TabIndex = 39;
             // 
-            // mtb_nomContact
+            // txt_prenomContact
             // 
-            this.mtb_nomContact.AsciiOnly = true;
-            this.mtb_nomContact.Location = new System.Drawing.Point(108, 34);
-            this.mtb_nomContact.Mask = "L>";
-            this.mtb_nomContact.Name = "mtb_nomContact";
-            this.mtb_nomContact.Size = new System.Drawing.Size(184, 20);
-            this.mtb_nomContact.TabIndex = 33;
+            this.txt_prenomContact.Location = new System.Drawing.Point(412, 26);
+            this.txt_prenomContact.Name = "txt_prenomContact";
+            this.txt_prenomContact.Size = new System.Drawing.Size(184, 20);
+            this.txt_prenomContact.TabIndex = 38;
             // 
-            // mtb_telContact
+            // txt_nomContact
             // 
-            this.mtb_telContact.Location = new System.Drawing.Point(108, 113);
-            this.mtb_telContact.Mask = "00 00 00 00 00 00";
-            this.mtb_telContact.Name = "mtb_telContact";
-            this.mtb_telContact.Size = new System.Drawing.Size(184, 20);
-            this.mtb_telContact.TabIndex = 32;
-            // 
-            // mtb_idContact
-            // 
-            this.mtb_idContact.Location = new System.Drawing.Point(412, 73);
-            this.mtb_idContact.Mask = "99999";
-            this.mtb_idContact.Name = "mtb_idContact";
-            this.mtb_idContact.Size = new System.Drawing.Size(184, 20);
-            this.mtb_idContact.TabIndex = 31;
-            this.mtb_idContact.ValidatingType = typeof(int);
+            this.txt_nomContact.Location = new System.Drawing.Point(108, 26);
+            this.txt_nomContact.Name = "txt_nomContact";
+            this.txt_nomContact.Size = new System.Drawing.Size(184, 20);
+            this.txt_nomContact.TabIndex = 37;
             // 
             // grbRecherche_frmCont
             // 
@@ -405,7 +382,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 508);
+            this.ClientSize = new System.Drawing.Size(646, 445);
             this.Controls.Add(this.grbRecherche_frmCont);
             this.Controls.Add(this.grbFiche_frmCont);
             this.Controls.Add(this.grbIntervention);
@@ -438,7 +415,6 @@
         private System.Windows.Forms.Label lbl_dureeCumul;
         private System.Windows.Forms.GroupBox grb_possibleInter;
         private System.Windows.Forms.GroupBox grb_statutProjet;
-        private System.Windows.Forms.Label lbl_nomClient_frmCont;
         private System.Windows.Forms.Label lbl_idContact;
         protected System.Windows.Forms.GroupBox grbIntervention;
         protected System.Windows.Forms.GroupBox grbFiche_frmCont;
@@ -452,14 +428,14 @@
         protected System.Windows.Forms.RadioButton rdbNon_possibleInter;
         protected System.Windows.Forms.RadioButton rdbOui_statutProjet;
         protected System.Windows.Forms.RadioButton rdbNon_statutProjet;
-        protected System.Windows.Forms.MaskedTextBox mtb_telContact;
-        protected System.Windows.Forms.MaskedTextBox mtb_idContact;
-        protected System.Windows.Forms.MaskedTextBox mtb_dureeCumul;
-        protected System.Windows.Forms.MaskedTextBox mtb_dureeProjet;
-        protected System.Windows.Forms.MaskedTextBox mtb_nomClient_frmCont;
-        protected System.Windows.Forms.MaskedTextBox mtb_fonctionContact;
-        protected System.Windows.Forms.MaskedTextBox mtb_prenomContact;
-        protected System.Windows.Forms.MaskedTextBox mtb_nomContact;
         protected System.Windows.Forms.TextBox txtRech_frmListCont;
+        protected System.Windows.Forms.ComboBox cbb_nomProjet;
+        protected System.Windows.Forms.TextBox txt_prenomContact;
+        protected System.Windows.Forms.TextBox txt_nomContact;
+        protected System.Windows.Forms.TextBox txt_idContact;
+        protected System.Windows.Forms.TextBox txt_mailContact;
+        protected System.Windows.Forms.TextBox txt_telContact;
+        protected System.Windows.Forms.TextBox txt_dureeCumul;
+        protected System.Windows.Forms.TextBox txt_dureeProjet;
     }
 }

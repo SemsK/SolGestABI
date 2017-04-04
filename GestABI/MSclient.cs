@@ -18,17 +18,17 @@ namespace GestABI
         public static Int32 Nclient;
 
         /// <summary>
-        /// Obtient le nom du client forcé en MAJUSCULE.
+        /// Obtient la raison sociale du client.
         /// </summary>
-        private String nomClient;
+        private String raisonSociale;
         /// <summary>
-        /// Nom du client ALPHANUMÉRIQUE ; le service commercial devra rentrer uniquement des chiffres ou des lettres.
+        /// Raison Sociale du client ALPHABÉTIQUE ; le service commercial devra rentrer uniquement des lettres.
         /// </summary>
-        public String NomClient
+        public String RaisonSociale
         {
-            get { return this.nomClient; }
-            set { this.nomClient = value.Trim().ToUpper(); } // Met le nom du client en majuscule.
-        }
+            get { return raisonSociale; }
+            set { raisonSociale = value; }
+        }        
 
         /// <summary>
         /// Obtient le numéro du client.
@@ -96,16 +96,16 @@ namespace GestABI
         }
 
         /// <summary>
-        /// Obtient la raison sociale du client.
+        /// Obtient le nom du contact forcé en MAJUSCULE.
         /// </summary>
-        private String raisonSociale;
+        private String nomContact;
         /// <summary>
-        /// Raison Sociale du client ALPHABÉTIQUE ; le service commercial devra rentrer uniquement des lettres.
+        /// Nom du contact ALPHANUMÉRIQUE ; le service commercial devra rentrer uniquement des chiffres ou des lettres.
         /// </summary>
-        public String RaisonSociale
+        public String NomContact
         {
-            get { return raisonSociale; }
-            set { raisonSociale = value; }
+            get { return this.nomContact; }
+            set { this.nomContact = value.Trim().ToUpper(); } // Met le nom du contact en majuscule.
         }
 
         /// <summary>

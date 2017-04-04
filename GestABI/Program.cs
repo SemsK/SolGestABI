@@ -14,13 +14,9 @@ namespace GestABI
         [STAThread]
         static void Main()
         {
-            // Au lancement de l'application, initialiser le nombre de clients et de contacts.
-            MSclient.Nclient = 0;
-            MScontact.Ncontact = 0;
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMDI());
+            Application.Run(new frmMDI());                            // Lancement de l'application par l'affichage de mon form frmMDI
         }
     }
 }

@@ -30,30 +30,12 @@
         {
             this.btnList_frmNewClie = new System.Windows.Forms.Button();
             this.btnOK_frmNewClie = new System.Windows.Forms.Button();
-            this.text_nomContact_frmClie = new System.Windows.Forms.TextBox();
             this.btnQuit_frmNewClie = new System.Windows.Forms.Button();
             this.grbBoutons_frmNewClie = new System.Windows.Forms.GroupBox();
             this.grbFiche_frmClie.SuspendLayout();
             this.grbRecherche_frmClie.SuspendLayout();
             this.grbBoutons_frmNewClie.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grbFiche_frmClie
-            // 
-            this.grbFiche_frmClie.Controls.Add(this.text_nomContact_frmClie);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.text_nomContact_frmClie, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_mail, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_adresse, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_ville, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_effectif, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_commClient, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_raisonSociale, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_nomClient, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_idClient, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_activite, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_cA, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_telephone, 0);
-            this.grbFiche_frmClie.Controls.SetChildIndex(this.txt_codeClient, 0);
             // 
             // grbRecherche_frmClie
             // 
@@ -77,13 +59,6 @@
             this.btnOK_frmNewClie.Text = "OK";
             this.btnOK_frmNewClie.UseVisualStyleBackColor = true;
             this.btnOK_frmNewClie.Click += new System.EventHandler(this.btnOK_frmNewClie_Click);
-            // 
-            // text_nomContact_frmClie
-            // 
-            this.text_nomContact_frmClie.Location = new System.Drawing.Point(119, 306);
-            this.text_nomContact_frmClie.Name = "text_nomContact_frmClie";
-            this.text_nomContact_frmClie.Size = new System.Drawing.Size(510, 20);
-            this.text_nomContact_frmClie.TabIndex = 37;
             // 
             // btnQuit_frmNewClie
             // 
@@ -132,6 +107,5 @@
         private System.Windows.Forms.Button btnOK_frmNewClie;
         private System.Windows.Forms.Button btnQuit_frmNewClie;
         private System.Windows.Forms.GroupBox grbBoutons_frmNewClie;
-        protected System.Windows.Forms.TextBox text_nomContact_frmClie;
     }
 }

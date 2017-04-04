@@ -13,29 +13,13 @@ namespace GestABI
     /// </summary>
     public partial class frmDspCont : frmCont
     {
-        /// <summary>
-        /// Rang du contact traité
-        /// </summary>
-        /*private Int32 iContact;*/
         public frmDspCont()
         {
             InitializeComponent();
         }
+       
 
-        /// <summary>
-        /// Au chargement du form : initiation de l'affichage
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void frmDspCont_Load(object sender, EventArgs e)      
-        {
-            base.grbRecherche_frmCont.Visible = false;
-            base.grbFiche_frmCont.Visible = false;
-            this.lblNoContact.Visible = true;
-            this.grbIntervention.Visible = false;
-            this.btnModi_frmDspCont.Visible = false;
-            this.btnSupp__frmDspCont.Visible = false;
-        }
+
     
     }
 }

@@ -14,21 +14,7 @@ namespace GestABI
     {
         public frmMDI()
         {
-            /* L'ensemble des fenêtre est non-modal (On peut travailler sur plusieurs fenêtres à la fois).
-            *  De plus, on peut ouvrir plusieurs fois la même fenêtre (Par ex, pour ajouter plusieurs contacts à un même client). */
             InitializeComponent();
-        }
-
-        /// <summary>
-        /// Menu "Fenêtre/Clients/Afficher" => Instancie un form "Affichage d'un client"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void tsmAfficher_clients_Click(object sender, EventArgs e)
-        {
-            frmDspClie frmDClie = new frmDspClie()  // Instancie le form frmDClie
-            { MdiParent = this };                   // Déclare une instance du form frmDispClie (Afficher un client)
-            frmDClie.Show();                        // Affiche le form frmDClie dans son conteneur frmMDI
         }
         
         /// <summary>
@@ -38,21 +24,9 @@ namespace GestABI
         /// <param name="e"></param>
         private void tsmListe_clients_Click(object sender, EventArgs e)
         {
-            frmListClie frmLClie = new frmListClie()  // Déclare une instance du form frmListClie (Liste des clients)
-            { MdiParent = this };                     // Instancie le form frmLClie
-            frmLClie.Show();                          // Affiche le form frmLClie dans son conteneur frmMDI
-        }
-
-        /// <summary>
-        /// Menu "Fenêtre/Contacts/Afficher" => Instancie un form "Affichage d'un contact"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void tsmAfficher_contacts_Click(object sender, EventArgs e)
-        {
-            frmDspCont frmDCont = new frmDspCont()  // Déclare une instance du form frmDispCont (Afficher un contact)
-            { MdiParent = this };                   // Instancie le form frmDCont
-            frmDCont.Show();                        // Affiche le form frmDCont dans son conteneur frmMDI
+            frmListClie frmLClie = new frmListClie()    // Déclare une instance du form frmListClie (Liste des clients)
+            { MdiParent = this };                       // Instancie le form frmLClie
+            frmLClie.Show();                            // Affiche le form frmLClie dans son conteneur frmMDI
         }
 
         /// <summary>
@@ -62,9 +36,9 @@ namespace GestABI
         /// <param name="e"></param>
         private void tsmAjouter_contacts_Click(object sender, EventArgs e)
         {
-            frmNewCont frmNCont = new frmNewCont()  // Déclare une instance du form frmNewCont (Ajouter un contact)
-            { MdiParent = this };                   // Instancie le form frmNCont 
-            frmNCont.Show();                        // Affiche le form frmNCont dans son conteneur frmMDI
+            frmNewCont frmNCont = new frmNewCont()     // Déclare une instance du form frmNewCont (Ajouter un contact)
+            { MdiParent = this };                      // Instancie le form frmNCont 
+            frmNCont.Show();                           // Affiche le form frmNCont dans son conteneur frmMDI
         }
 
         /// <summary>
@@ -115,6 +89,7 @@ namespace GestABI
                 *  Sa fermeture se fait par un click sur le bouton OK ou le case de fermeture */
                 MessageBox.Show("L'application GestABI a été conçu et développé par KÉLÉTAONA Sems", "À Propos de ...");
         }
+
         /// <summary>
         /// "Fenêtre/Clients/Ajouter" => Instancie un form "Ajouter un nouveau client"
         /// </summary>

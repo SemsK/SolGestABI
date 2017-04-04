@@ -36,25 +36,24 @@
             this.lbl_nomContact_frmClie = new System.Windows.Forms.Label();
             this.txt_commClient = new System.Windows.Forms.TextBox();
             this.lbl_commClient = new System.Windows.Forms.Label();
-            this.lbl_nomClient = new System.Windows.Forms.Label();
             this.lbl_idClient = new System.Windows.Forms.Label();
             this.lbl_activite = new System.Windows.Forms.Label();
             this.lblCA = new System.Windows.Forms.Label();
             this.grbFiche_frmClie = new System.Windows.Forms.GroupBox();
+            this.cbb_nomContact_frmClie = new System.Windows.Forms.ComboBox();
+            this.cbb_nature = new System.Windows.Forms.ComboBox();
             this.txt_codeClient = new System.Windows.Forms.TextBox();
+            this.cbb_typeSociete = new System.Windows.Forms.ComboBox();
             this.txt_telephone = new System.Windows.Forms.TextBox();
             this.txt_cA = new System.Windows.Forms.TextBox();
             this.txt_activite = new System.Windows.Forms.TextBox();
             this.txt_idClient = new System.Windows.Forms.TextBox();
-            this.txt_nomClient = new System.Windows.Forms.TextBox();
             this.grbRecherche_frmClie = new System.Windows.Forms.GroupBox();
             this.cbbRech_frmListClie = new System.Windows.Forms.ComboBox();
             this.btn_lancRech_frmListClie = new System.Windows.Forms.Button();
             this.rdb_activite_frmClie = new System.Windows.Forms.RadioButton();
             this.rdn_nomClient_frmClie = new System.Windows.Forms.RadioButton();
             this.rdb_nomClient_frmClie = new System.Windows.Forms.RadioButton();
-            this.cbb_nature = new System.Windows.Forms.ComboBox();
-            this.cbb_typeSociete = new System.Windows.Forms.ComboBox();
             this.grbFiche_frmClie.SuspendLayout();
             this.grbRecherche_frmClie.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +84,7 @@
             // lbl_raisonSociale
             // 
             this.lbl_raisonSociale.AutoSize = true;
-            this.lbl_raisonSociale.Location = new System.Drawing.Point(19, 149);
+            this.lbl_raisonSociale.Location = new System.Drawing.Point(19, 29);
             this.lbl_raisonSociale.Name = "lbl_raisonSociale";
             this.lbl_raisonSociale.Size = new System.Drawing.Size(84, 13);
             this.lbl_raisonSociale.TabIndex = 11;
@@ -93,7 +92,7 @@
             // 
             // txt_raisonSociale
             // 
-            this.txt_raisonSociale.Location = new System.Drawing.Point(119, 146);
+            this.txt_raisonSociale.Location = new System.Drawing.Point(119, 26);
             this.txt_raisonSociale.Name = "txt_raisonSociale";
             this.txt_raisonSociale.Size = new System.Drawing.Size(188, 20);
             this.txt_raisonSociale.TabIndex = 13;
@@ -166,7 +165,7 @@
             // 
             // txt_effectif
             // 
-            this.txt_effectif.Location = new System.Drawing.Point(441, 146);
+            this.txt_effectif.Location = new System.Drawing.Point(119, 146);
             this.txt_effectif.Name = "txt_effectif";
             this.txt_effectif.Size = new System.Drawing.Size(188, 20);
             this.txt_effectif.TabIndex = 25;
@@ -174,7 +173,7 @@
             // lbl_effectif
             // 
             this.lbl_effectif.AutoSize = true;
-            this.lbl_effectif.Location = new System.Drawing.Point(331, 149);
+            this.lbl_effectif.Location = new System.Drawing.Point(19, 149);
             this.lbl_effectif.Name = "lbl_effectif";
             this.lbl_effectif.Size = new System.Drawing.Size(51, 13);
             this.lbl_effectif.TabIndex = 28;
@@ -206,15 +205,6 @@
             this.lbl_commClient.TabIndex = 32;
             this.lbl_commClient.Text = "Commentaires :";
             // 
-            // lbl_nomClient
-            // 
-            this.lbl_nomClient.AutoSize = true;
-            this.lbl_nomClient.Location = new System.Drawing.Point(19, 29);
-            this.lbl_nomClient.Name = "lbl_nomClient";
-            this.lbl_nomClient.Size = new System.Drawing.Size(78, 13);
-            this.lbl_nomClient.TabIndex = 36;
-            this.lbl_nomClient.Text = "Nom du client :";
-            // 
             // lbl_idClient
             // 
             this.lbl_idClient.AutoSize = true;
@@ -244,6 +234,7 @@
             // 
             // grbFiche_frmClie
             // 
+            this.grbFiche_frmClie.Controls.Add(this.cbb_nomContact_frmClie);
             this.grbFiche_frmClie.Controls.Add(this.cbb_nature);
             this.grbFiche_frmClie.Controls.Add(this.txt_codeClient);
             this.grbFiche_frmClie.Controls.Add(this.cbb_typeSociete);
@@ -251,8 +242,6 @@
             this.grbFiche_frmClie.Controls.Add(this.txt_cA);
             this.grbFiche_frmClie.Controls.Add(this.txt_activite);
             this.grbFiche_frmClie.Controls.Add(this.txt_idClient);
-            this.grbFiche_frmClie.Controls.Add(this.txt_nomClient);
-            this.grbFiche_frmClie.Controls.Add(this.lbl_nomClient);
             this.grbFiche_frmClie.Controls.Add(this.lbl_typeSociete);
             this.grbFiche_frmClie.Controls.Add(this.lbl_nature);
             this.grbFiche_frmClie.Controls.Add(this.lbl_commClient);
@@ -279,12 +268,45 @@
             this.grbFiche_frmClie.TabIndex = 44;
             this.grbFiche_frmClie.TabStop = false;
             // 
+            // cbb_nomContact_frmClie
+            // 
+            this.cbb_nomContact_frmClie.FormattingEnabled = true;
+            this.cbb_nomContact_frmClie.Location = new System.Drawing.Point(119, 306);
+            this.cbb_nomContact_frmClie.Name = "cbb_nomContact_frmClie";
+            this.cbb_nomContact_frmClie.Size = new System.Drawing.Size(510, 21);
+            this.cbb_nomContact_frmClie.TabIndex = 50;
+            // 
+            // cbb_nature
+            // 
+            this.cbb_nature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_nature.FormattingEnabled = true;
+            this.cbb_nature.Items.AddRange(new object[] {
+            "Principale",
+            "Secondaire",
+            "Ancienne"});
+            this.cbb_nature.Location = new System.Drawing.Point(441, 106);
+            this.cbb_nature.Name = "cbb_nature";
+            this.cbb_nature.Size = new System.Drawing.Size(188, 21);
+            this.cbb_nature.TabIndex = 47;
+            // 
             // txt_codeClient
             // 
             this.txt_codeClient.Location = new System.Drawing.Point(119, 266);
             this.txt_codeClient.Name = "txt_codeClient";
             this.txt_codeClient.Size = new System.Drawing.Size(188, 20);
             this.txt_codeClient.TabIndex = 49;
+            // 
+            // cbb_typeSociete
+            // 
+            this.cbb_typeSociete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_typeSociete.FormattingEnabled = true;
+            this.cbb_typeSociete.Items.AddRange(new object[] {
+            "Public",
+            "Privee"});
+            this.cbb_typeSociete.Location = new System.Drawing.Point(119, 106);
+            this.cbb_typeSociete.Name = "cbb_typeSociete";
+            this.cbb_typeSociete.Size = new System.Drawing.Size(188, 21);
+            this.cbb_typeSociete.TabIndex = 46;
             // 
             // txt_telephone
             // 
@@ -313,13 +335,6 @@
             this.txt_idClient.Name = "txt_idClient";
             this.txt_idClient.Size = new System.Drawing.Size(188, 20);
             this.txt_idClient.TabIndex = 45;
-            // 
-            // txt_nomClient
-            // 
-            this.txt_nomClient.Location = new System.Drawing.Point(119, 26);
-            this.txt_nomClient.Name = "txt_nomClient";
-            this.txt_nomClient.Size = new System.Drawing.Size(188, 20);
-            this.txt_nomClient.TabIndex = 44;
             // 
             // grbRecherche_frmClie
             // 
@@ -385,31 +400,6 @@
             this.rdb_nomClient_frmClie.Text = "Nom";
             this.rdb_nomClient_frmClie.UseVisualStyleBackColor = true;
             // 
-            // cbb_nature
-            // 
-            this.cbb_nature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_nature.FormattingEnabled = true;
-            this.cbb_nature.Items.AddRange(new object[] {
-            "Principale",
-            "Secondaire",
-            "Ancienne"});
-            this.cbb_nature.Location = new System.Drawing.Point(441, 106);
-            this.cbb_nature.Name = "cbb_nature";
-            this.cbb_nature.Size = new System.Drawing.Size(188, 21);
-            this.cbb_nature.TabIndex = 47;
-            // 
-            // cbb_typeSociete
-            // 
-            this.cbb_typeSociete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_typeSociete.FormattingEnabled = true;
-            this.cbb_typeSociete.Items.AddRange(new object[] {
-            "Public",
-            "Privee"});
-            this.cbb_typeSociete.Location = new System.Drawing.Point(119, 106);
-            this.cbb_typeSociete.Name = "cbb_typeSociete";
-            this.cbb_typeSociete.Size = new System.Drawing.Size(188, 21);
-            this.cbb_typeSociete.TabIndex = 46;
-            // 
             // frmClie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,7 +409,6 @@
             this.Controls.Add(this.grbFiche_frmClie);
             this.Name = "frmClie";
             this.Text = "Form ancêtre client";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formClos_frmClie);
             this.grbFiche_frmClie.ResumeLayout(false);
             this.grbFiche_frmClie.PerformLayout();
             this.grbRecherche_frmClie.ResumeLayout(false);
@@ -442,7 +431,6 @@
         private System.Windows.Forms.Label lbl_effectif;
         private System.Windows.Forms.Label lbl_nomContact_frmClie;
         private System.Windows.Forms.Label lbl_commClient;
-        private System.Windows.Forms.Label lbl_nomClient;
         private System.Windows.Forms.Label lbl_idClient;
         private System.Windows.Forms.Label lbl_activite;
         private System.Windows.Forms.Label lblCA;
@@ -459,7 +447,6 @@
         protected System.Windows.Forms.TextBox txt_effectif;
         protected System.Windows.Forms.TextBox txt_commClient;
         protected System.Windows.Forms.TextBox txt_idClient;
-        protected System.Windows.Forms.TextBox txt_nomClient;
         protected System.Windows.Forms.TextBox txt_cA;
         protected System.Windows.Forms.TextBox txt_activite;
         protected System.Windows.Forms.TextBox txt_telephone;
@@ -467,5 +454,6 @@
         protected System.Windows.Forms.ComboBox cbbRech_frmListClie;
         protected System.Windows.Forms.ComboBox cbb_nature;
         protected System.Windows.Forms.ComboBox cbb_typeSociete;
+        protected System.Windows.Forms.ComboBox cbb_nomContact_frmClie;
     }
 }

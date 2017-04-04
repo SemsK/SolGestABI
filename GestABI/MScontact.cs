@@ -96,19 +96,6 @@ namespace GestABI
         }
 
         /// <summary>
-        /// Obtient le nom du client forcé en MAJUSCULE.
-        /// </summary>
-        private String nomClient;
-        /// <summary>
-        /// Nom du client ALPHANUMÉRIQUE ; le service commercial devra rentrer uniquement des chiffres ou des lettres.
-        /// </summary>
-        public String NomClient
-        {
-            get { return this.nomClient; }
-            set { this.nomClient = value.Trim().ToUpper(); } // Met le nom du client en majuscule.
-        }
-
-        /// <summary>
         /// Obtient le nom du projet forcé en MAJUSCULE.
         /// </summary>
         private String nomProjet;

@@ -32,15 +32,9 @@
             this.txtRech_frmListClie = new System.Windows.Forms.TextBox();
             this.btn_lancRech_frmListClie = new System.Windows.Forms.Button();
             this.rdb_activite = new System.Windows.Forms.RadioButton();
-            this.rdn_idClient = new System.Windows.Forms.RadioButton();
+            this.rdb_idClient = new System.Windows.Forms.RadioButton();
             this.rdb_nomClient = new System.Windows.Forms.RadioButton();
             this.grd_frmListClie = new System.Windows.Forms.DataGridView();
-            this.cln_nomClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cln_idClient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cln_activite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cln_CA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cln_effectif = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cln_mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_annuRech = new System.Windows.Forms.Button();
             this.btn_affiModi_frmListClie = new System.Windows.Forms.Button();
             this.btn_ajouClie_frmListClie = new System.Windows.Forms.Button();
@@ -53,7 +47,7 @@
             this.grb_rech_frmListClie.Controls.Add(this.txtRech_frmListClie);
             this.grb_rech_frmListClie.Controls.Add(this.btn_lancRech_frmListClie);
             this.grb_rech_frmListClie.Controls.Add(this.rdb_activite);
-            this.grb_rech_frmListClie.Controls.Add(this.rdn_idClient);
+            this.grb_rech_frmListClie.Controls.Add(this.rdb_idClient);
             this.grb_rech_frmListClie.Controls.Add(this.rdb_nomClient);
             this.grb_rech_frmListClie.Location = new System.Drawing.Point(22, 12);
             this.grb_rech_frmListClie.Name = "grb_rech_frmListClie";
@@ -77,6 +71,7 @@
             this.btn_lancRech_frmListClie.TabIndex = 3;
             this.btn_lancRech_frmListClie.Text = "Lancer la recherche";
             this.btn_lancRech_frmListClie.UseVisualStyleBackColor = true;
+            this.btn_lancRech_frmListClie.Click += new System.EventHandler(this.btn_lancRech_frmListClie_Click);
             // 
             // rdb_activite
             // 
@@ -89,16 +84,16 @@
             this.rdb_activite.Text = "Activité";
             this.rdb_activite.UseVisualStyleBackColor = true;
             // 
-            // rdn_idClient
+            // rdb_idClient
             // 
-            this.rdn_idClient.AutoSize = true;
-            this.rdn_idClient.Location = new System.Drawing.Point(134, 39);
-            this.rdn_idClient.Name = "rdn_idClient";
-            this.rdn_idClient.Size = new System.Drawing.Size(62, 17);
-            this.rdn_idClient.TabIndex = 1;
-            this.rdn_idClient.TabStop = true;
-            this.rdn_idClient.Text = "Numéro";
-            this.rdn_idClient.UseVisualStyleBackColor = true;
+            this.rdb_idClient.AutoSize = true;
+            this.rdb_idClient.Location = new System.Drawing.Point(134, 39);
+            this.rdb_idClient.Name = "rdb_idClient";
+            this.rdb_idClient.Size = new System.Drawing.Size(62, 17);
+            this.rdb_idClient.TabIndex = 1;
+            this.rdb_idClient.TabStop = true;
+            this.rdb_idClient.Text = "Numéro";
+            this.rdb_idClient.UseVisualStyleBackColor = true;
             // 
             // rdb_nomClient
             // 
@@ -114,57 +109,11 @@
             // grd_frmListClie
             // 
             this.grd_frmListClie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grd_frmListClie.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cln_nomClient,
-            this.cln_idClient,
-            this.cln_activite,
-            this.cln_CA,
-            this.cln_effectif,
-            this.cln_mail});
             this.grd_frmListClie.Location = new System.Drawing.Point(22, 112);
             this.grd_frmListClie.Name = "grd_frmListClie";
             this.grd_frmListClie.Size = new System.Drawing.Size(738, 545);
             this.grd_frmListClie.TabIndex = 1;
-            // 
-            // cln_nomClient
-            // 
-            this.cln_nomClient.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cln_nomClient.HeaderText = "Nom";
-            this.cln_nomClient.Name = "cln_nomClient";
-            this.cln_nomClient.Width = 150;
-            // 
-            // cln_idClient
-            // 
-            this.cln_idClient.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cln_idClient.HeaderText = "Numéro";
-            this.cln_idClient.Name = "cln_idClient";
-            this.cln_idClient.Width = 80;
-            // 
-            // cln_activite
-            // 
-            this.cln_activite.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cln_activite.HeaderText = "Activité";
-            this.cln_activite.Name = "cln_activite";
-            // 
-            // cln_CA
-            // 
-            this.cln_CA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cln_CA.HeaderText = "C.A.";
-            this.cln_CA.Name = "cln_CA";
-            // 
-            // cln_effectif
-            // 
-            this.cln_effectif.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cln_effectif.HeaderText = "Effectif";
-            this.cln_effectif.Name = "cln_effectif";
-            this.cln_effectif.Width = 70;
-            // 
-            // cln_mail
-            // 
-            this.cln_mail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.cln_mail.HeaderText = "Adresse mail";
-            this.cln_mail.Name = "cln_mail";
-            this.cln_mail.Width = 200;
+            this.grd_frmListClie.DoubleClick += new System.EventHandler(this.grd_frmListClie_DoubleClick);
             // 
             // btn_annuRech
             // 
@@ -174,6 +123,7 @@
             this.btn_annuRech.TabIndex = 2;
             this.btn_annuRech.Text = "Annuler la rech.";
             this.btn_annuRech.UseVisualStyleBackColor = true;
+            this.btn_annuRech.Click += new System.EventHandler(this.btn_annuRech_Click);
             // 
             // btn_affiModi_frmListClie
             // 
@@ -192,6 +142,7 @@
             this.btn_ajouClie_frmListClie.TabIndex = 4;
             this.btn_ajouClie_frmListClie.Text = "Ajouter un client";
             this.btn_ajouClie_frmListClie.UseVisualStyleBackColor = true;
+            this.btn_ajouClie_frmListClie.Click += new System.EventHandler(this.btn_ajouClie_frmListClie_Click);
             // 
             // frmListClie
             // 
@@ -215,15 +166,9 @@
         #endregion
         private System.Windows.Forms.RadioButton rdb_nomClient;
         private System.Windows.Forms.DataGridView grd_frmListClie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cln_nomClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cln_idClient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cln_activite;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cln_CA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cln_effectif;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cln_mail;
         private System.Windows.Forms.Button btn_lancRech_frmListClie;
         private System.Windows.Forms.RadioButton rdb_activite;
-        private System.Windows.Forms.RadioButton rdn_idClient;
+        private System.Windows.Forms.RadioButton rdb_idClient;
         private System.Windows.Forms.TextBox txtRech_frmListClie;
         private System.Windows.Forms.Button btn_annuRech;
         private System.Windows.Forms.Button btn_affiModi_frmListClie;

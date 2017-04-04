@@ -12,76 +12,111 @@ namespace GestABI
     /// Classe dérivée de frmClie : form de lecture et de modification des clients
     /// </summary>
     public partial class frmDspClie : frmClie
-    {
+    {    
         /// <summary>
-        /// Rang du client traité
+        /// Constructeur adapté : mémorise le client à traiter
         /// </summary>
-        private Int32 iClient;
-
-        public frmDspClie()
+        /// <param name="unClient"> la référence de l'objet MSclient à gérer dans ce form</param>
+        public frmDspClie(MSclient unClient)
         {
+            this.leClient = unClient;                                         // Crée une référence d'objet client reçu en paramètre  
             InitializeComponent();
         }
 
         /// <summary>
-        /// Au chargement du form : initiation de l'affichage
+        /// La référence du client à afficher / modifier
+        /// </summary>
+        private MSclient leClient;
+        
+        /// <summary>
+        /// Au démarrage, affiche le client reçu sur le form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void frmDspClie_Load(object sender, EventArgs e)
         {
-            base.grbRecherche_frmClie.Visible = false;
-            base.grbFiche_frmClie.Visible = false;
-            this.lblNoClient.Visible = true;
-            this.btnModiCont.Visible = false;
-            this.btnValiModi.Visible = false;            
-            this.btnSupp_frmDspClie.Visible = false;
-            this.btnAjou_frmDspClie.Visible = true;
+            this.afficheClient(this.leClient);                                // Affiche le client
         }
 
         /// <summary>
-        /// Menu "Fenêtre/Clients/Ajouter" => Instancie un form "Ajouter un nouveau client"
+        /// Procédure affichant en textbox les données d'un client reçu
+        /// </summary>
+        /// <param name="unClient"></param>
+        public void afficheClient(MSclient unClient)  
+        {
+            this.txt_raisonSociale.Text = unClient.RaisonSociale;                     //Affecte les textbox
+            this.txt_idClient.Text = unClient.IdClient.ToString();
+            this.cbb_typeSociete.Text = unClient.TypeClient;
+            this.txt_activite.Text = unClient.Activite;
+            this.txt_cA.Text = unClient.CA.ToString();
+            this.cbb_nature.Text = unClient.Nature;
+            this.cbb_nomContact_frmClie.Text = unClient.NomContact;
+            this.txt_effectif.Text = unClient.Effectif.ToString();
+            this.txt_telephone.Text = unClient.Telephone;
+            this.txt_mail.Text = unClient.Mail;
+            this.txt_adresse.Text = unClient.Adresse;
+            this.txt_codeClient.Text = unClient.CodeClient;
+            this.txt_ville.Text = unClient.Ville;
+            this.txt_commClient.Text = unClient.CommClient;
+        }
+
+        /// <summary>
+        /// Bouton "Supprimer le client" : Supprime le client de la liste MSclient et NClient
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        private void btnSupp_frmDspClie_Click(object sender, EventArgs e)
+        {
+            Donnees.ArrayClient.Remove(leClient);
+        }
+
+        /// <summary>
+        /// Bouton "Valider les modifications" : Enregistre les données saisies / Affiche dans la Liste l'objet MSclient
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnValiModi_Click(object sender, EventArgs e)
+        {
+            leClient.RaisonSociale = base.txt_raisonSociale.Text;
+            leClient.IdClient = Int32.Parse(base.txt_idClient.Text.Trim());
+            leClient.TypeClient = cbb_typeSociete.Text;
+            leClient.Activite = base.txt_activite.Text;
+            leClient.CA = Decimal.Parse(base.txt_cA.Text.Trim());
+            leClient.Nature = cbb_nature.Text;
+            leClient.NomContact = base.cbb_nomContact_frmClie.Text;
+            leClient.Effectif = Int32.Parse(base.txt_effectif.Text.Trim());
+            leClient.Telephone = base.txt_telephone.Text;
+            leClient.Mail = base.txt_mail.Text;
+            leClient.Adresse = base.txt_adresse.Text;
+            leClient.CodeClient = base.txt_codeClient.Text;
+            leClient.Ville = base.txt_ville.Text;
+            leClient.CommClient = base.txt_commClient.Text;
+            this.DialogResult = DialogResult.OK;
+        }
+
+        /// <summary>
+        /// Bouton "Ajouter un client" : Ouvre le form NewClie ""Ajouter un nouveau client"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>        
         private void btnAjou_frmDspClie_Click(object sender, EventArgs e)
         {
-            frmNewClie frmNCont = new frmNewClie()  // Déclare une instance du form frmNewCont (Ajouter un contact)
-            { MdiParent = this };                   // Instancie le form frmNCont 
-            frmNCont.Show();                        // Affiche le form frmNCont dans son conteneur frmMDI
-            if (frmNCont.ShowDialog() == DialogResult.OK)
-            {
-                base.grbRecherche_frmClie.Visible = false;  // Au besoin, afficher les textbox   
-                base.grbFiche_frmClie.Visible = true;
-              //  this.grbBoutons_frmNewClie.Visible = true;  // Gère l'affichage des boutons                                 
-                this.iClient = MSclient.Nclient - 1;        // Recherche rang du stagiaire saisi       
-                this.afficheUnClient(iClient);              // Afficher ce client sur le form  
+            frmNewClie frmNClie = new frmNewClie();                           // Déclare une instance du form frmNewClie (Ajouter un client)
+            if (frmNClie.ShowDialog() == DialogResult.OK)
+            {                                  
+                this.afficheClient(leClient);                                 // Afficher ce client sur le form  
             }
         }
 
         /// <summary>
-        /// Remplissage des textbox du form
+        /// Bouton "Annuler les modifications" : Affiche les données de référence du stagiaire 
         /// </summary>
-        /// <param name="i"> Rang du stagiaire dans la collection d'objets </param>
-        private void afficheUnClient (Int32 i)
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAnnuModi_Click(object sender, EventArgs e)
         {
-            MSclient leClient = Donnees.ArrayClient[i];
-            // Affiche les textbox qui sont héritées (==> base.) et les convetit en chaine
-            
-            txt_nomClient.Text = leClient.NomClient;
-            txt_idClient.Text = leClient.IdClient.ToString();
-            cbb_typeSociete.Text = leClient.TypeClient;
-            txt_activite.Text = leClient.Activite;
-            txt_cA.Text = leClient.CA.ToString();
-            cbb_nature.Text = leClient.Nature;
-            txt_raisonSociale.Text = leClient.RaisonSociale;
-            txt_effectif.Text = leClient.Effectif.ToString();
-            txt_telephone.Text = leClient.Telephone;
-            txt_mail.Text = leClient.Mail;
-            txt_adresse.Text = leClient.Adresse;
-            txt_codeClient.Text = leClient.CodeClient;
-            txt_ville.Text = leClient.Ville;
-            txt_commClient.Text = leClient.CommClient;
+            this.afficheClient(this.leClient);                                // Réaffiche le stagiaire
         }
     }
 }
+

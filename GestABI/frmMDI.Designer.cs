@@ -36,11 +36,9 @@
             this.tsmFenetre = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmCommercial_fenetre = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmClients_commercial = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmAfficher_clients = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAjouter_clients = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmListe_clients = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmContacts_commercial = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmAfficher_contacts = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAjouter_contacts = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmListe_contacts = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmProjet_fenetre = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,19 +108,11 @@
             // tsmClients_commercial
             // 
             this.tsmClients_commercial.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmAfficher_clients,
             this.tsmAjouter_clients,
             this.tsmListe_clients});
             this.tsmClients_commercial.Name = "tsmClients_commercial";
             this.tsmClients_commercial.Size = new System.Drawing.Size(152, 22);
             this.tsmClients_commercial.Text = "Clients";
-            // 
-            // tsmAfficher_clients
-            // 
-            this.tsmAfficher_clients.Name = "tsmAfficher_clients";
-            this.tsmAfficher_clients.Size = new System.Drawing.Size(152, 22);
-            this.tsmAfficher_clients.Text = "Afficher";
-            this.tsmAfficher_clients.Click += new System.EventHandler(this.tsmAfficher_clients_Click);
             // 
             // tsmAjouter_clients
             // 
@@ -141,31 +131,23 @@
             // tsmContacts_commercial
             // 
             this.tsmContacts_commercial.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmAfficher_contacts,
             this.tsmAjouter_contacts,
             this.tsmListe_contacts});
             this.tsmContacts_commercial.Name = "tsmContacts_commercial";
             this.tsmContacts_commercial.Size = new System.Drawing.Size(152, 22);
             this.tsmContacts_commercial.Text = "Contacts";
             // 
-            // tsmAfficher_contacts
-            // 
-            this.tsmAfficher_contacts.Name = "tsmAfficher_contacts";
-            this.tsmAfficher_contacts.Size = new System.Drawing.Size(116, 22);
-            this.tsmAfficher_contacts.Text = "Afficher";
-            this.tsmAfficher_contacts.Click += new System.EventHandler(this.tsmAfficher_contacts_Click);
-            // 
             // tsmAjouter_contacts
             // 
             this.tsmAjouter_contacts.Name = "tsmAjouter_contacts";
-            this.tsmAjouter_contacts.Size = new System.Drawing.Size(116, 22);
+            this.tsmAjouter_contacts.Size = new System.Drawing.Size(152, 22);
             this.tsmAjouter_contacts.Text = "Ajouter";
             this.tsmAjouter_contacts.Click += new System.EventHandler(this.tsmAjouter_contacts_Click);
             // 
             // tsmListe_contacts
             // 
             this.tsmListe_contacts.Name = "tsmListe_contacts";
-            this.tsmListe_contacts.Size = new System.Drawing.Size(116, 22);
+            this.tsmListe_contacts.Size = new System.Drawing.Size(152, 22);
             this.tsmListe_contacts.Text = "Liste";
             this.tsmListe_contacts.Click += new System.EventHandler(this.tsmListe_contacts_Click);
             // 
@@ -250,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 730);
+            this.ClientSize = new System.Drawing.Size(1177, 786);
             this.Controls.Add(this.menuStpRPC);
             this.IsMdiContainer = true;
             this.Name = "frmMDI";
@@ -270,11 +252,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmFenetre;
         private System.Windows.Forms.ToolStripMenuItem tsmCommercial_fenetre;
         private System.Windows.Forms.ToolStripMenuItem tsmClients_commercial;
-        private System.Windows.Forms.ToolStripMenuItem tsmAfficher_clients;
         private System.Windows.Forms.ToolStripMenuItem tsmAjouter_clients;
         private System.Windows.Forms.ToolStripMenuItem tsmListe_clients;
         private System.Windows.Forms.ToolStripMenuItem tsmContacts_commercial;
-        private System.Windows.Forms.ToolStripMenuItem tsmAfficher_contacts;
         private System.Windows.Forms.ToolStripMenuItem tsmAjouter_contacts;
         private System.Windows.Forms.ToolStripMenuItem tsmListe_contacts;
         private System.Windows.Forms.ToolStripMenuItem tsmProjet_fenetre;

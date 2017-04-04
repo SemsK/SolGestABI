@@ -29,22 +29,14 @@
         private void InitializeComponent()
         {
             this.grbBoutons_NewCont = new System.Windows.Forms.GroupBox();
-            this.btnAjou_frmNewCont = new System.Windows.Forms.Button();
+            this.btnOK_frmNewCont = new System.Windows.Forms.Button();
             this.btnList_frmNewCont = new System.Windows.Forms.Button();
-            this.btnAnnu_frmNewCont = new System.Windows.Forms.Button();
-            this.txt_nomProjet_frmNewCont = new System.Windows.Forms.TextBox();
+            this.btnQuit_frmNewCont = new System.Windows.Forms.Button();
             this.grbIntervention.SuspendLayout();
             this.grbFiche_frmCont.SuspendLayout();
             this.grbRecherche_frmCont.SuspendLayout();
             this.grbBoutons_NewCont.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grbIntervention
-            // 
-            this.grbIntervention.Controls.Add(this.txt_nomProjet_frmNewCont);
-            this.grbIntervention.Controls.SetChildIndex(this.mtb_dureeProjet, 0);
-            this.grbIntervention.Controls.SetChildIndex(this.mtb_dureeCumul, 0);
-            this.grbIntervention.Controls.SetChildIndex(this.txt_nomProjet_frmNewCont, 0);
             // 
             // grbRecherche_frmCont
             // 
@@ -52,23 +44,25 @@
             // 
             // grbBoutons_NewCont
             // 
-            this.grbBoutons_NewCont.Controls.Add(this.btnAjou_frmNewCont);
+            this.grbBoutons_NewCont.Controls.Add(this.btnOK_frmNewCont);
             this.grbBoutons_NewCont.Controls.Add(this.btnList_frmNewCont);
-            this.grbBoutons_NewCont.Controls.Add(this.btnAnnu_frmNewCont);
-            this.grbBoutons_NewCont.Location = new System.Drawing.Point(349, 496);
+            this.grbBoutons_NewCont.Controls.Add(this.btnQuit_frmNewCont);
+            this.grbBoutons_NewCont.Location = new System.Drawing.Point(349, 432);
             this.grbBoutons_NewCont.Name = "grbBoutons_NewCont";
             this.grbBoutons_NewCont.Size = new System.Drawing.Size(280, 58);
             this.grbBoutons_NewCont.TabIndex = 46;
             this.grbBoutons_NewCont.TabStop = false;
             // 
-            // btnAjou_frmNewCont
+            // btnOK_frmNewCont
             // 
-            this.btnAjou_frmNewCont.Location = new System.Drawing.Point(14, 20);
-            this.btnAjou_frmNewCont.Name = "btnAjou_frmNewCont";
-            this.btnAjou_frmNewCont.Size = new System.Drawing.Size(75, 23);
-            this.btnAjou_frmNewCont.TabIndex = 34;
-            this.btnAjou_frmNewCont.Text = "Ajouter";
-            this.btnAjou_frmNewCont.UseVisualStyleBackColor = true;
+            this.btnOK_frmNewCont.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnOK_frmNewCont.Location = new System.Drawing.Point(14, 20);
+            this.btnOK_frmNewCont.Name = "btnOK_frmNewCont";
+            this.btnOK_frmNewCont.Size = new System.Drawing.Size(75, 23);
+            this.btnOK_frmNewCont.TabIndex = 34;
+            this.btnOK_frmNewCont.Text = "OK";
+            this.btnOK_frmNewCont.UseVisualStyleBackColor = true;
+            this.btnOK_frmNewCont.Click += new System.EventHandler(this.btnOK_frmNewCont_Click);
             // 
             // btnList_frmNewCont
             // 
@@ -79,26 +73,20 @@
             this.btnList_frmNewCont.Text = "Liste";
             this.btnList_frmNewCont.UseVisualStyleBackColor = true;
             // 
-            // btnAnnu_frmNewCont
+            // btnQuit_frmNewCont
             // 
-            this.btnAnnu_frmNewCont.Location = new System.Drawing.Point(102, 20);
-            this.btnAnnu_frmNewCont.Name = "btnAnnu_frmNewCont";
-            this.btnAnnu_frmNewCont.Size = new System.Drawing.Size(75, 23);
-            this.btnAnnu_frmNewCont.TabIndex = 38;
-            this.btnAnnu_frmNewCont.Text = "Annuler";
-            this.btnAnnu_frmNewCont.UseVisualStyleBackColor = true;
-            // 
-            // txt_nomProjet_frmNewCont
-            // 
-            this.txt_nomProjet_frmNewCont.Location = new System.Drawing.Point(108, 26);
-            this.txt_nomProjet_frmNewCont.Name = "txt_nomProjet_frmNewCont";
-            this.txt_nomProjet_frmNewCont.Size = new System.Drawing.Size(488, 20);
-            this.txt_nomProjet_frmNewCont.TabIndex = 28;
+            this.btnQuit_frmNewCont.Location = new System.Drawing.Point(102, 20);
+            this.btnQuit_frmNewCont.Name = "btnQuit_frmNewCont";
+            this.btnQuit_frmNewCont.Size = new System.Drawing.Size(75, 23);
+            this.btnQuit_frmNewCont.TabIndex = 38;
+            this.btnQuit_frmNewCont.Text = "Quitter";
+            this.btnQuit_frmNewCont.UseVisualStyleBackColor = true;
+            this.btnQuit_frmNewCont.Click += new System.EventHandler(this.btnQuit_frmNewCont_Click);
             // 
             // frmNewCont
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(646, 572);
+            this.ClientSize = new System.Drawing.Size(646, 504);
             this.Controls.Add(this.grbBoutons_NewCont);
             this.Name = "frmNewCont";
             this.Text = "Ajouter un nouveau contact";
@@ -120,9 +108,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grbBoutons_NewCont;
-        private System.Windows.Forms.Button btnAjou_frmNewCont;
+        private System.Windows.Forms.Button btnOK_frmNewCont;
         private System.Windows.Forms.Button btnList_frmNewCont;
-        private System.Windows.Forms.Button btnAnnu_frmNewCont;
-        protected System.Windows.Forms.TextBox txt_nomProjet_frmNewCont;
+        private System.Windows.Forms.Button btnQuit_frmNewCont;
     }
 }
