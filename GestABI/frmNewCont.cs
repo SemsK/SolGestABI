@@ -16,9 +16,9 @@ namespace GestABI
             // Replace en haut de la fenêtre "Ajouter un nouveau contact" les groupesbox "Fiche","Intervention" et "Boutons"
             // afin d'éviter un vide laissé par le groupebox "Recherche" devenu invisible. 
             this.grbFiche_frmCont.Location = new System.Drawing.Point(18, 12);
-            this.grbIntervention.Location = new System.Drawing.Point(18, 165);
-            this.grbBoutons_NewCont.Location = new System.Drawing.Point(415, 243);
-            this.Height = 355;
+            this.grbIntervention.Location = new System.Drawing.Point(18, 205);
+            this.grbBoutons_NewCont.Location = new System.Drawing.Point(415, 285);
+            this.Height = 398;
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace GestABI
             {
                 if (this.instancie())
                 {   // Cas général : si l'instanciation stagiaire et son ajout à la collection est OK :
-                    MScontact.compteurContact += 1;                                 // - incrémentation compteurs de stagiaires
+                    ClasseContact.compteurContact += 1;                                 // - incrémentation compteurs de stagiaires
                     this.DialogResult = DialogResult.OK;                            // - fermeture de la boite de dialogue par validation
                 }
             }
@@ -99,7 +99,7 @@ namespace GestABI
         /// <returns> Boolean : true = OK, false =erreur </returns>
         private Boolean instancie()
         {
-            MScontact nouveauContact = new MScontact();  // créer une référence d'objet MStagiaire 
+            ClasseContact nouveauContact = new ClasseContact();  // créer une référence d'objet MStagiaire 
             try
             {
                 // affecter les données de l'objet MStagiaire : variables simples, ou propriétés ce qui déclenche alors le code des méthodes set

@@ -41,7 +41,7 @@
             // 
             // btnSupp__frmDspCont
             // 
-            this.btnSupp__frmDspCont.Location = new System.Drawing.Point(18, 351);
+            this.btnSupp__frmDspCont.Location = new System.Drawing.Point(16, 21);
             this.btnSupp__frmDspCont.Name = "btnSupp__frmDspCont";
             this.btnSupp__frmDspCont.Size = new System.Drawing.Size(75, 23);
             this.btnSupp__frmDspCont.TabIndex = 34;
@@ -52,17 +52,18 @@
             // grbBoutons_NewCont
             // 
             this.grbBoutons_NewCont.Controls.Add(this.btnQuit_frmDspCont);
+            this.grbBoutons_NewCont.Controls.Add(this.btnSupp__frmDspCont);
             this.grbBoutons_NewCont.Controls.Add(this.btnValider_frmDspCont);
             this.grbBoutons_NewCont.Controls.Add(this.btnAnnu_frmDspCont);
-            this.grbBoutons_NewCont.Location = new System.Drawing.Point(341, 330);
+            this.grbBoutons_NewCont.Location = new System.Drawing.Point(18, 372);
             this.grbBoutons_NewCont.Name = "grbBoutons_NewCont";
-            this.grbBoutons_NewCont.Size = new System.Drawing.Size(288, 61);
+            this.grbBoutons_NewCont.Size = new System.Drawing.Size(611, 61);
             this.grbBoutons_NewCont.TabIndex = 47;
             this.grbBoutons_NewCont.TabStop = false;
             // 
             // btnQuit_frmDspCont
             // 
-            this.btnQuit_frmDspCont.Location = new System.Drawing.Point(198, 21);
+            this.btnQuit_frmDspCont.Location = new System.Drawing.Point(521, 21);
             this.btnQuit_frmDspCont.Name = "btnQuit_frmDspCont";
             this.btnQuit_frmDspCont.Size = new System.Drawing.Size(75, 23);
             this.btnQuit_frmDspCont.TabIndex = 27;
@@ -72,7 +73,7 @@
             // 
             // btnValider_frmDspCont
             // 
-            this.btnValider_frmDspCont.Location = new System.Drawing.Point(18, 21);
+            this.btnValider_frmDspCont.Location = new System.Drawing.Point(337, 21);
             this.btnValider_frmDspCont.Name = "btnValider_frmDspCont";
             this.btnValider_frmDspCont.Size = new System.Drawing.Size(75, 23);
             this.btnValider_frmDspCont.TabIndex = 26;
@@ -82,7 +83,7 @@
             // 
             // btnAnnu_frmDspCont
             // 
-            this.btnAnnu_frmDspCont.Location = new System.Drawing.Point(108, 21);
+            this.btnAnnu_frmDspCont.Location = new System.Drawing.Point(430, 21);
             this.btnAnnu_frmDspCont.Name = "btnAnnu_frmDspCont";
             this.btnAnnu_frmDspCont.Size = new System.Drawing.Size(75, 23);
             this.btnAnnu_frmDspCont.TabIndex = 25;
@@ -93,8 +94,7 @@
             // frmDspCont
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(646, 407);
-            this.Controls.Add(this.btnSupp__frmDspCont);
+            this.ClientSize = new System.Drawing.Size(646, 451);
             this.Controls.Add(this.grbBoutons_NewCont);
             this.Name = "frmDspCont";
             this.Text = "Affichage / Modification d\'un contact";
@@ -102,7 +102,6 @@
             this.Controls.SetChildIndex(this.grbBoutons_NewCont, 0);
             this.Controls.SetChildIndex(this.grbRecherche_frmCont, 0);
             this.Controls.SetChildIndex(this.grbIntervention, 0);
-            this.Controls.SetChildIndex(this.btnSupp__frmDspCont, 0);
             this.Controls.SetChildIndex(this.grbFiche_frmCont, 0);
             this.grbIntervention.ResumeLayout(false);
             this.grbIntervention.PerformLayout();

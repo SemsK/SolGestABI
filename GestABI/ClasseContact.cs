@@ -10,7 +10,7 @@ namespace GestABI
     /// Classe des contacts : permet de mémoriser les informations concernant un contact ;
     /// Elle comporte des propriétés et des attributs / Données partagées par toutes les instances (=> Static)
     /// </summary>
-    public class MScontact
+    public class ClasseContact
     {
         /// <summary>
         /// Nombre de contacts de la classe (public car partagé par toutes les instances).

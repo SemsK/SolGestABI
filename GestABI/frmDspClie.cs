@@ -17,7 +17,7 @@ namespace GestABI
         /// Constructeur adapté : mémorise le client à traiter
         /// </summary>
         /// <param name="unClient"> la référence de l'objet MSclient à gérer dans ce form</param>
-        public frmDspClie(MSclient unClient)
+        public frmDspClie(ClasseClient unClient)
         {
             //unClient.RaisonSociale = Donnees.ArrayClient[frmListClie.iClie].RaisonSociale;
 
@@ -28,7 +28,7 @@ namespace GestABI
         /// <summary>
         /// La référence du client à afficher / modifier
         /// </summary>
-        private MSclient leClient;
+        private ClasseClient leClient;
         
         /// <summary>
         /// Au démarrage, affiche le client reçu sur le form
@@ -44,7 +44,7 @@ namespace GestABI
         /// Procédure affichant en textbox les données d'un client reçu
         /// </summary>
         /// <param name="unClient"></param>
-        public void afficheClient(MSclient unClient)  
+        public void afficheClient(ClasseClient unClient)  
         {
             this.txt_raisonSociale.Text = unClient.RaisonSociale;                     //Affecte les textbox
             this.txt_idClient.Text = unClient.IdClient.ToString();

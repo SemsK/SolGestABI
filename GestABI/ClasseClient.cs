@@ -10,7 +10,7 @@ namespace GestABI
     /// Classe des Clients : Cette classe va me permettre de mémoriser le informations concernants un client ;
     /// Elle comporte des propriétés et des attributs / Données partagées par toutes les instances ( => Static)
     /// </summary>
-    public class MSclient
+    public class ClasseClient
     {
         /// <summary>
         /// Nombre de clients de la classe (public car partagé par toutes les instances).

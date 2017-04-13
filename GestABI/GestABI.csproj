@@ -107,8 +107,8 @@
     <Compile Include="frmNewClie.Designer.cs">
       <DependentUpon>frmNewClie.cs</DependentUpon>
     </Compile>
-    <Compile Include="MSclient.cs" />
-    <Compile Include="MScontact.cs" />
+    <Compile Include="ClasseClient.cs" />
+    <Compile Include="ClasseContact.cs" />
     <Compile Include="Outils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

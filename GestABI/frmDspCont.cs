@@ -17,7 +17,7 @@ namespace GestABI
         /// Constructeur adapté : Mémorise le contact à traiter
         /// </summary>
         /// <param name="unContact"> la référence de l'objet MSContact à gérer dans ce form </param>
-        public frmDspCont(MScontact unContact)
+        public frmDspCont(ClasseContact unContact)
         {
             // Crée une référence d'objet contact reçu en paramètre
             this.leContact = unContact;
@@ -26,7 +26,7 @@ namespace GestABI
          /// <summary>
          /// La référence du contact à afficher / modifier
          /// </summary>
-        private MScontact leContact;
+        private ClasseContact leContact;
 
         /// <summary>
         /// Au démarrage, afficher le contact reçu sur le form
@@ -42,7 +42,7 @@ namespace GestABI
         /// Procédure affichant en textbox les données d'un contact reçu
         /// </summary>
         /// <param name="unContact"></param>
-        public void afficheContact(MScontact unContact)
+        public void afficheContact(ClasseContact unContact)
         {
             this.txt_nomContact.Text = unContact.NomContact;              // Affecte les textbox
             this.txt_prenomContact.Text = unContact.PrenomContact;                   
@@ -61,7 +61,7 @@ namespace GestABI
         private void btnSupp__frmDspCont_Click(object sender, EventArgs e)
         {
             Donnees.ArrayContact.Remove(leContact);
-            MScontact.compteurContact -= 1;
+            ClasseContact.compteurContact -= 1;
         }
 
         /// <summary>

@@ -45,7 +45,7 @@
             // 
             this.grbBoutons_NewCont.Controls.Add(this.btnOK_frmNewCont);
             this.grbBoutons_NewCont.Controls.Add(this.btnQuit_frmNewCont);
-            this.grbBoutons_NewCont.Location = new System.Drawing.Point(415, 330);
+            this.grbBoutons_NewCont.Location = new System.Drawing.Point(415, 372);
             this.grbBoutons_NewCont.Name = "grbBoutons_NewCont";
             this.grbBoutons_NewCont.Size = new System.Drawing.Size(214, 61);
             this.grbBoutons_NewCont.TabIndex = 46;
@@ -75,7 +75,7 @@
             // frmNewCont
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(646, 403);
+            this.ClientSize = new System.Drawing.Size(646, 446);
             this.Controls.Add(this.grbBoutons_NewCont);
             this.Name = "frmNewCont";
             this.ShowInTaskbar = false;

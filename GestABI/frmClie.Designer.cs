@@ -262,7 +262,7 @@
             this.grbFiche_frmClie.Controls.Add(this.lbl_mail);
             this.grbFiche_frmClie.Controls.Add(this.lbl_raisonSociale);
             this.grbFiche_frmClie.Controls.Add(this.lbl_telephone);
-            this.grbFiche_frmClie.Location = new System.Drawing.Point(20, 108);
+            this.grbFiche_frmClie.Location = new System.Drawing.Point(20, 101);
             this.grbFiche_frmClie.Name = "grbFiche_frmClie";
             this.grbFiche_frmClie.Size = new System.Drawing.Size(646, 535);
             this.grbFiche_frmClie.TabIndex = 44;
@@ -404,7 +404,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 662);
+            this.ClientSize = new System.Drawing.Size(686, 656);
             this.Controls.Add(this.grbRecherche_frmClie);
             this.Controls.Add(this.grbFiche_frmClie);
             this.Name = "frmClie";

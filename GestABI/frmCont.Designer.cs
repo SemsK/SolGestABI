@@ -41,6 +41,8 @@
             this.cbb_nomProjet = new System.Windows.Forms.ComboBox();
             this.lbl_idContact = new System.Windows.Forms.Label();
             this.grbFiche_frmCont = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txt_mailContact = new System.Windows.Forms.TextBox();
             this.txt_telContact = new System.Windows.Forms.TextBox();
             this.txt_idContact = new System.Windows.Forms.TextBox();
@@ -60,7 +62,7 @@
             // lbl_nomContact
             // 
             this.lbl_nomContact.AutoSize = true;
-            this.lbl_nomContact.Location = new System.Drawing.Point(13, 29);
+            this.lbl_nomContact.Location = new System.Drawing.Point(13, 70);
             this.lbl_nomContact.Name = "lbl_nomContact";
             this.lbl_nomContact.Size = new System.Drawing.Size(35, 13);
             this.lbl_nomContact.TabIndex = 0;
@@ -69,7 +71,7 @@
             // lbl_prenomContact
             // 
             this.lbl_prenomContact.AutoSize = true;
-            this.lbl_prenomContact.Location = new System.Drawing.Point(320, 29);
+            this.lbl_prenomContact.Location = new System.Drawing.Point(320, 70);
             this.lbl_prenomContact.Name = "lbl_prenomContact";
             this.lbl_prenomContact.Size = new System.Drawing.Size(49, 13);
             this.lbl_prenomContact.TabIndex = 2;
@@ -78,7 +80,7 @@
             // lbl_telContact
             // 
             this.lbl_telContact.AutoSize = true;
-            this.lbl_telContact.Location = new System.Drawing.Point(13, 108);
+            this.lbl_telContact.Location = new System.Drawing.Point(13, 149);
             this.lbl_telContact.Name = "lbl_telContact";
             this.lbl_telContact.Size = new System.Drawing.Size(94, 13);
             this.lbl_telContact.TabIndex = 4;
@@ -87,7 +89,7 @@
             // lbl_fonctionContact
             // 
             this.lbl_fonctionContact.AutoSize = true;
-            this.lbl_fonctionContact.Location = new System.Drawing.Point(13, 68);
+            this.lbl_fonctionContact.Location = new System.Drawing.Point(13, 109);
             this.lbl_fonctionContact.Name = "lbl_fonctionContact";
             this.lbl_fonctionContact.Size = new System.Drawing.Size(54, 13);
             this.lbl_fonctionContact.TabIndex = 8;
@@ -95,7 +97,7 @@
             // 
             // txt_fonctionContact
             // 
-            this.txt_fonctionContact.Location = new System.Drawing.Point(108, 65);
+            this.txt_fonctionContact.Location = new System.Drawing.Point(108, 106);
             this.txt_fonctionContact.Name = "txt_fonctionContact";
             this.txt_fonctionContact.Size = new System.Drawing.Size(184, 20);
             this.txt_fonctionContact.TabIndex = 9;
@@ -103,7 +105,7 @@
             // lbl_mailContact
             // 
             this.lbl_mailContact.AutoSize = true;
-            this.lbl_mailContact.Location = new System.Drawing.Point(320, 108);
+            this.lbl_mailContact.Location = new System.Drawing.Point(320, 149);
             this.lbl_mailContact.Name = "lbl_mailContact";
             this.lbl_mailContact.Size = new System.Drawing.Size(72, 13);
             this.lbl_mailContact.TabIndex = 10;
@@ -112,7 +114,7 @@
             // lbl_nomDocs
             // 
             this.lbl_nomDocs.AutoSize = true;
-            this.lbl_nomDocs.Location = new System.Drawing.Point(12, 29);
+            this.lbl_nomDocs.Location = new System.Drawing.Point(13, 35);
             this.lbl_nomDocs.Name = "lbl_nomDocs";
             this.lbl_nomDocs.Size = new System.Drawing.Size(62, 13);
             this.lbl_nomDocs.TabIndex = 12;
@@ -121,7 +123,7 @@
             // lbl_dureeCumul
             // 
             this.lbl_dureeCumul.AutoSize = true;
-            this.lbl_dureeCumul.Location = new System.Drawing.Point(320, 29);
+            this.lbl_dureeCumul.Location = new System.Drawing.Point(320, 35);
             this.lbl_dureeCumul.Name = "lbl_dureeCumul";
             this.lbl_dureeCumul.Size = new System.Drawing.Size(127, 13);
             this.lbl_dureeCumul.TabIndex = 22;
@@ -133,16 +135,16 @@
             this.grbIntervention.Controls.Add(this.cbb_nomProjet);
             this.grbIntervention.Controls.Add(this.lbl_dureeCumul);
             this.grbIntervention.Controls.Add(this.lbl_nomDocs);
-            this.grbIntervention.Location = new System.Drawing.Point(18, 252);
+            this.grbIntervention.Location = new System.Drawing.Point(18, 292);
             this.grbIntervention.Name = "grbIntervention";
-            this.grbIntervention.Size = new System.Drawing.Size(611, 72);
+            this.grbIntervention.Size = new System.Drawing.Size(611, 74);
             this.grbIntervention.TabIndex = 26;
             this.grbIntervention.TabStop = false;
             this.grbIntervention.Text = "Intervention";
             // 
             // txt_dureeCumul
             // 
-            this.txt_dureeCumul.Location = new System.Drawing.Point(471, 26);
+            this.txt_dureeCumul.Location = new System.Drawing.Point(471, 32);
             this.txt_dureeCumul.Name = "txt_dureeCumul";
             this.txt_dureeCumul.Size = new System.Drawing.Size(125, 20);
             this.txt_dureeCumul.TabIndex = 30;
@@ -150,7 +152,7 @@
             // cbb_nomProjet
             // 
             this.cbb_nomProjet.FormattingEnabled = true;
-            this.cbb_nomProjet.Location = new System.Drawing.Point(108, 26);
+            this.cbb_nomProjet.Location = new System.Drawing.Point(108, 31);
             this.cbb_nomProjet.Name = "cbb_nomProjet";
             this.cbb_nomProjet.Size = new System.Drawing.Size(184, 21);
             this.cbb_nomProjet.TabIndex = 28;
@@ -158,7 +160,7 @@
             // lbl_idContact
             // 
             this.lbl_idContact.AutoSize = true;
-            this.lbl_idContact.Location = new System.Drawing.Point(320, 68);
+            this.lbl_idContact.Location = new System.Drawing.Point(320, 109);
             this.lbl_idContact.Name = "lbl_idContact";
             this.lbl_idContact.Size = new System.Drawing.Size(63, 13);
             this.lbl_idContact.TabIndex = 6;
@@ -166,6 +168,8 @@
             // 
             // grbFiche_frmCont
             // 
+            this.grbFiche_frmCont.Controls.Add(this.textBox1);
+            this.grbFiche_frmCont.Controls.Add(this.label1);
             this.grbFiche_frmCont.Controls.Add(this.txt_mailContact);
             this.grbFiche_frmCont.Controls.Add(this.txt_telContact);
             this.grbFiche_frmCont.Controls.Add(this.txt_idContact);
@@ -180,41 +184,57 @@
             this.grbFiche_frmCont.Controls.Add(this.lbl_telContact);
             this.grbFiche_frmCont.Location = new System.Drawing.Point(18, 99);
             this.grbFiche_frmCont.Name = "grbFiche_frmCont";
-            this.grbFiche_frmCont.Size = new System.Drawing.Size(611, 147);
+            this.grbFiche_frmCont.Size = new System.Drawing.Size(611, 187);
             this.grbFiche_frmCont.TabIndex = 29;
             this.grbFiche_frmCont.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(108, 28);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(184, 20);
+            this.textBox1.TabIndex = 43;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Numéro Client : ";
+            // 
             // txt_mailContact
             // 
-            this.txt_mailContact.Location = new System.Drawing.Point(412, 105);
+            this.txt_mailContact.Location = new System.Drawing.Point(412, 146);
             this.txt_mailContact.Name = "txt_mailContact";
             this.txt_mailContact.Size = new System.Drawing.Size(184, 20);
             this.txt_mailContact.TabIndex = 41;
             // 
             // txt_telContact
             // 
-            this.txt_telContact.Location = new System.Drawing.Point(108, 105);
+            this.txt_telContact.Location = new System.Drawing.Point(108, 146);
             this.txt_telContact.Name = "txt_telContact";
             this.txt_telContact.Size = new System.Drawing.Size(184, 20);
             this.txt_telContact.TabIndex = 40;
             // 
             // txt_idContact
             // 
-            this.txt_idContact.Location = new System.Drawing.Point(412, 65);
+            this.txt_idContact.Location = new System.Drawing.Point(412, 106);
             this.txt_idContact.Name = "txt_idContact";
             this.txt_idContact.Size = new System.Drawing.Size(184, 20);
             this.txt_idContact.TabIndex = 39;
             // 
             // txt_prenomContact
             // 
-            this.txt_prenomContact.Location = new System.Drawing.Point(412, 26);
+            this.txt_prenomContact.Location = new System.Drawing.Point(412, 67);
             this.txt_prenomContact.Name = "txt_prenomContact";
             this.txt_prenomContact.Size = new System.Drawing.Size(184, 20);
             this.txt_prenomContact.TabIndex = 38;
             // 
             // txt_nomContact
             // 
-            this.txt_nomContact.Location = new System.Drawing.Point(108, 26);
+            this.txt_nomContact.Location = new System.Drawing.Point(108, 67);
             this.txt_nomContact.Name = "txt_nomContact";
             this.txt_nomContact.Size = new System.Drawing.Size(184, 20);
             this.txt_nomContact.TabIndex = 37;
@@ -286,7 +306,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 342);
+            this.ClientSize = new System.Drawing.Size(646, 384);
             this.Controls.Add(this.grbRecherche_frmCont);
             this.Controls.Add(this.grbFiche_frmCont);
             this.Controls.Add(this.grbIntervention);
@@ -328,5 +348,7 @@
         protected System.Windows.Forms.TextBox txt_mailContact;
         protected System.Windows.Forms.TextBox txt_telContact;
         protected System.Windows.Forms.TextBox txt_dureeCumul;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

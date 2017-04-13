@@ -16,7 +16,7 @@ namespace GestABI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMDI());                            // Lancement de l'application par l'affichage de mon form frmMDI
+            Application.Run(new frmMDI());                         // Lancement de l'application par l'affichage de mon form frmMDI
         }
     }
 }

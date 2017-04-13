@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnList_frmNewClie = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
             this.btnOK_frmNewClie = new System.Windows.Forms.Button();
             this.btnQuit_frmNewClie = new System.Windows.Forms.Button();
             this.grbBoutons_frmNewClie = new System.Windows.Forms.GroupBox();
+            this.errorProvider_NewClie = new System.Windows.Forms.ErrorProvider(this.components);
             this.grbFiche_frmClie.SuspendLayout();
             this.grbRecherche_frmClie.SuspendLayout();
             this.grbBoutons_frmNewClie.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_NewClie)).BeginInit();
             this.SuspendLayout();
             // 
             // grbRecherche_frmClie
@@ -44,15 +46,6 @@
             // txt_idClient
             // 
             this.txt_idClient.ReadOnly = true;
-            // 
-            // btnList_frmNewClie
-            // 
-            this.btnList_frmNewClie.Location = new System.Drawing.Point(190, 20);
-            this.btnList_frmNewClie.Name = "btnList_frmNewClie";
-            this.btnList_frmNewClie.Size = new System.Drawing.Size(75, 23);
-            this.btnList_frmNewClie.TabIndex = 33;
-            this.btnList_frmNewClie.Text = "Liste";
-            this.btnList_frmNewClie.UseVisualStyleBackColor = true;
             // 
             // btnOK_frmNewClie
             // 
@@ -77,18 +70,21 @@
             // grbBoutons_frmNewClie
             // 
             this.grbBoutons_frmNewClie.Controls.Add(this.btnOK_frmNewClie);
-            this.grbBoutons_frmNewClie.Controls.Add(this.btnList_frmNewClie);
             this.grbBoutons_frmNewClie.Controls.Add(this.btnQuit_frmNewClie);
-            this.grbBoutons_frmNewClie.Location = new System.Drawing.Point(386, 649);
+            this.grbBoutons_frmNewClie.Location = new System.Drawing.Point(473, 642);
             this.grbBoutons_frmNewClie.Name = "grbBoutons_frmNewClie";
-            this.grbBoutons_frmNewClie.Size = new System.Drawing.Size(280, 58);
+            this.grbBoutons_frmNewClie.Size = new System.Drawing.Size(193, 58);
             this.grbBoutons_frmNewClie.TabIndex = 44;
             this.grbBoutons_frmNewClie.TabStop = false;
+            // 
+            // errorProvider_NewClie
+            // 
+            this.errorProvider_NewClie.ContainerControl = this;
             // 
             // frmNewClie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(686, 719);
+            this.ClientSize = new System.Drawing.Size(686, 720);
             this.Controls.Add(this.grbBoutons_frmNewClie);
             this.Name = "frmNewClie";
             this.ShowInTaskbar = false;
@@ -101,15 +97,15 @@
             this.grbRecherche_frmClie.ResumeLayout(false);
             this.grbRecherche_frmClie.PerformLayout();
             this.grbBoutons_frmNewClie.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_NewClie)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnList_frmNewClie;
         private System.Windows.Forms.Button btnOK_frmNewClie;
         private System.Windows.Forms.Button btnQuit_frmNewClie;
         private System.Windows.Forms.GroupBox grbBoutons_frmNewClie;
+        private System.Windows.Forms.ErrorProvider errorProvider_NewClie;
     }
 }

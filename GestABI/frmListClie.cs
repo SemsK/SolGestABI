@@ -109,7 +109,7 @@ namespace GestABI
         {
             Int32 iClie;                                                              // rang du stagiaire dans la collection 
             iClie = this.grd_frmListClie.CurrentRow.Index;                            // récupérer indice du stagiaire cliqué en DataGridView             
-            MSclient leClient = Donnees.ArrayClient[iClie];                           // instancier un objet stagiaire pointant vers le stagiaire d'origine dans la collection             
+            ClasseClient leClient = Donnees.ArrayClient[iClie];                           // instancier un objet stagiaire pointant vers le stagiaire d'origine dans la collection             
             frmDspClie frmDsp = new frmDspClie(leClient);                             // instancier un form détail pour ce stagiaire             
             DialogResult result = frmDsp.ShowDialog();                                // afficher le form détail en modal   
             if (result == DialogResult.OK)

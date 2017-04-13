@@ -14,12 +14,12 @@ namespace GestABI
         /// <summary>
         /// Collection d'objets MClient
         /// </summary>
-        public static List<MSclient> ArrayClient = new List<MSclient>();
+        public static List<ClasseClient> ArrayClient = new List<ClasseClient>();
 
         /// <summary>
         /// Collection d'objets MContact
         /// </summary>
-        public static List<MScontact> ArrayContact = new List<MScontact>();
+        public static List<ClasseContact> ArrayContact = new List<ClasseContact>();
 
     }
 }
