@@ -109,6 +109,7 @@
     </Compile>
     <Compile Include="MSclient.cs" />
     <Compile Include="MScontact.cs" />
+    <Compile Include="Outils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmNewCont.resx">

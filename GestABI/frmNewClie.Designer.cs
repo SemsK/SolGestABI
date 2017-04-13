@@ -41,6 +41,10 @@
             // 
             this.grbRecherche_frmClie.Visible = false;
             // 
+            // txt_idClient
+            // 
+            this.txt_idClient.ReadOnly = true;
+            // 
             // btnList_frmNewClie
             // 
             this.btnList_frmNewClie.Location = new System.Drawing.Point(190, 20);

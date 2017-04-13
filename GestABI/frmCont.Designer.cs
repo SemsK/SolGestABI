@@ -34,18 +34,10 @@
             this.lbl_fonctionContact = new System.Windows.Forms.Label();
             this.txt_fonctionContact = new System.Windows.Forms.TextBox();
             this.lbl_mailContact = new System.Windows.Forms.Label();
-            this.lbl_nomProjet = new System.Windows.Forms.Label();
-            this.rdbOui_possibleInter = new System.Windows.Forms.RadioButton();
-            this.rdbNon_possibleInter = new System.Windows.Forms.RadioButton();
-            this.lbl_dureeProjet = new System.Windows.Forms.Label();
-            this.rdbOui_statutProjet = new System.Windows.Forms.RadioButton();
-            this.rdbNon_statutProjet = new System.Windows.Forms.RadioButton();
+            this.lbl_nomDocs = new System.Windows.Forms.Label();
             this.lbl_dureeCumul = new System.Windows.Forms.Label();
-            this.grb_possibleInter = new System.Windows.Forms.GroupBox();
-            this.grb_statutProjet = new System.Windows.Forms.GroupBox();
             this.grbIntervention = new System.Windows.Forms.GroupBox();
             this.txt_dureeCumul = new System.Windows.Forms.TextBox();
-            this.txt_dureeProjet = new System.Windows.Forms.TextBox();
             this.cbb_nomProjet = new System.Windows.Forms.ComboBox();
             this.lbl_idContact = new System.Windows.Forms.Label();
             this.grbFiche_frmCont = new System.Windows.Forms.GroupBox();
@@ -60,8 +52,6 @@
             this.rdb_nomClient_frmCont = new System.Windows.Forms.RadioButton();
             this.rdb_prenomContact_frmCont = new System.Windows.Forms.RadioButton();
             this.rdb_nomContact_frmCont = new System.Windows.Forms.RadioButton();
-            this.grb_possibleInter.SuspendLayout();
-            this.grb_statutProjet.SuspendLayout();
             this.grbIntervention.SuspendLayout();
             this.grbFiche_frmCont.SuspendLayout();
             this.grbRecherche_frmCont.SuspendLayout();
@@ -119,136 +109,50 @@
             this.lbl_mailContact.TabIndex = 10;
             this.lbl_mailContact.Text = "Adresse mail :";
             // 
-            // lbl_nomProjet
+            // lbl_nomDocs
             // 
-            this.lbl_nomProjet.AutoSize = true;
-            this.lbl_nomProjet.Location = new System.Drawing.Point(12, 29);
-            this.lbl_nomProjet.Name = "lbl_nomProjet";
-            this.lbl_nomProjet.Size = new System.Drawing.Size(40, 13);
-            this.lbl_nomProjet.TabIndex = 12;
-            this.lbl_nomProjet.Text = "Projet :";
-            // 
-            // rdbOui_possibleInter
-            // 
-            this.rdbOui_possibleInter.AutoSize = true;
-            this.rdbOui_possibleInter.Location = new System.Drawing.Point(159, 19);
-            this.rdbOui_possibleInter.Name = "rdbOui_possibleInter";
-            this.rdbOui_possibleInter.Size = new System.Drawing.Size(41, 17);
-            this.rdbOui_possibleInter.TabIndex = 15;
-            this.rdbOui_possibleInter.TabStop = true;
-            this.rdbOui_possibleInter.Text = "Oui";
-            this.rdbOui_possibleInter.UseVisualStyleBackColor = true;
-            // 
-            // rdbNon_possibleInter
-            // 
-            this.rdbNon_possibleInter.AutoSize = true;
-            this.rdbNon_possibleInter.Location = new System.Drawing.Point(218, 19);
-            this.rdbNon_possibleInter.Name = "rdbNon_possibleInter";
-            this.rdbNon_possibleInter.Size = new System.Drawing.Size(45, 17);
-            this.rdbNon_possibleInter.TabIndex = 16;
-            this.rdbNon_possibleInter.TabStop = true;
-            this.rdbNon_possibleInter.Text = "Non";
-            this.rdbNon_possibleInter.UseVisualStyleBackColor = true;
-            // 
-            // lbl_dureeProjet
-            // 
-            this.lbl_dureeProjet.AutoSize = true;
-            this.lbl_dureeProjet.Location = new System.Drawing.Point(12, 136);
-            this.lbl_dureeProjet.Name = "lbl_dureeProjet";
-            this.lbl_dureeProjet.Size = new System.Drawing.Size(136, 13);
-            this.lbl_dureeProjet.TabIndex = 17;
-            this.lbl_dureeProjet.Text = "Nbre d\'heures sur le projet :";
-            // 
-            // rdbOui_statutProjet
-            // 
-            this.rdbOui_statutProjet.AutoSize = true;
-            this.rdbOui_statutProjet.Location = new System.Drawing.Point(155, 18);
-            this.rdbOui_statutProjet.Name = "rdbOui_statutProjet";
-            this.rdbOui_statutProjet.Size = new System.Drawing.Size(41, 17);
-            this.rdbOui_statutProjet.TabIndex = 20;
-            this.rdbOui_statutProjet.TabStop = true;
-            this.rdbOui_statutProjet.Text = "Oui";
-            this.rdbOui_statutProjet.UseVisualStyleBackColor = true;
-            // 
-            // rdbNon_statutProjet
-            // 
-            this.rdbNon_statutProjet.AutoSize = true;
-            this.rdbNon_statutProjet.Location = new System.Drawing.Point(216, 18);
-            this.rdbNon_statutProjet.Name = "rdbNon_statutProjet";
-            this.rdbNon_statutProjet.Size = new System.Drawing.Size(45, 17);
-            this.rdbNon_statutProjet.TabIndex = 21;
-            this.rdbNon_statutProjet.TabStop = true;
-            this.rdbNon_statutProjet.Text = "Non";
-            this.rdbNon_statutProjet.UseVisualStyleBackColor = true;
+            this.lbl_nomDocs.AutoSize = true;
+            this.lbl_nomDocs.Location = new System.Drawing.Point(12, 29);
+            this.lbl_nomDocs.Name = "lbl_nomDocs";
+            this.lbl_nomDocs.Size = new System.Drawing.Size(62, 13);
+            this.lbl_nomDocs.TabIndex = 12;
+            this.lbl_nomDocs.Text = "Document :";
             // 
             // lbl_dureeCumul
             // 
             this.lbl_dureeCumul.AutoSize = true;
-            this.lbl_dureeCumul.Location = new System.Drawing.Point(320, 136);
+            this.lbl_dureeCumul.Location = new System.Drawing.Point(320, 29);
             this.lbl_dureeCumul.Name = "lbl_dureeCumul";
             this.lbl_dureeCumul.Size = new System.Drawing.Size(127, 13);
             this.lbl_dureeCumul.TabIndex = 22;
             this.lbl_dureeCumul.Text = "Nbre d\'heures cumulées :";
             // 
-            // grb_possibleInter
-            // 
-            this.grb_possibleInter.Controls.Add(this.rdbOui_possibleInter);
-            this.grb_possibleInter.Controls.Add(this.rdbNon_possibleInter);
-            this.grb_possibleInter.Location = new System.Drawing.Point(11, 66);
-            this.grb_possibleInter.Name = "grb_possibleInter";
-            this.grb_possibleInter.Size = new System.Drawing.Size(286, 49);
-            this.grb_possibleInter.TabIndex = 24;
-            this.grb_possibleInter.TabStop = false;
-            this.grb_possibleInter.Text = "Intervenant sur le projet :";
-            // 
-            // grb_statutProjet
-            // 
-            this.grb_statutProjet.Controls.Add(this.rdbNon_statutProjet);
-            this.grb_statutProjet.Controls.Add(this.rdbOui_statutProjet);
-            this.grb_statutProjet.Location = new System.Drawing.Point(317, 67);
-            this.grb_statutProjet.Name = "grb_statutProjet";
-            this.grb_statutProjet.Size = new System.Drawing.Size(283, 48);
-            this.grb_statutProjet.TabIndex = 25;
-            this.grb_statutProjet.TabStop = false;
-            this.grb_statutProjet.Text = "Projet en cours :";
-            // 
             // grbIntervention
             // 
             this.grbIntervention.Controls.Add(this.txt_dureeCumul);
-            this.grbIntervention.Controls.Add(this.txt_dureeProjet);
             this.grbIntervention.Controls.Add(this.cbb_nomProjet);
-            this.grbIntervention.Controls.Add(this.grb_possibleInter);
-            this.grbIntervention.Controls.Add(this.grb_statutProjet);
             this.grbIntervention.Controls.Add(this.lbl_dureeCumul);
-            this.grbIntervention.Controls.Add(this.lbl_dureeProjet);
-            this.grbIntervention.Controls.Add(this.lbl_nomProjet);
+            this.grbIntervention.Controls.Add(this.lbl_nomDocs);
             this.grbIntervention.Location = new System.Drawing.Point(18, 252);
             this.grbIntervention.Name = "grbIntervention";
-            this.grbIntervention.Size = new System.Drawing.Size(611, 173);
+            this.grbIntervention.Size = new System.Drawing.Size(611, 72);
             this.grbIntervention.TabIndex = 26;
             this.grbIntervention.TabStop = false;
             this.grbIntervention.Text = "Intervention";
             // 
             // txt_dureeCumul
             // 
-            this.txt_dureeCumul.Location = new System.Drawing.Point(460, 133);
+            this.txt_dureeCumul.Location = new System.Drawing.Point(471, 26);
             this.txt_dureeCumul.Name = "txt_dureeCumul";
-            this.txt_dureeCumul.Size = new System.Drawing.Size(136, 20);
+            this.txt_dureeCumul.Size = new System.Drawing.Size(125, 20);
             this.txt_dureeCumul.TabIndex = 30;
-            // 
-            // txt_dureeProjet
-            // 
-            this.txt_dureeProjet.Location = new System.Drawing.Point(154, 133);
-            this.txt_dureeProjet.Name = "txt_dureeProjet";
-            this.txt_dureeProjet.Size = new System.Drawing.Size(136, 20);
-            this.txt_dureeProjet.TabIndex = 29;
             // 
             // cbb_nomProjet
             // 
             this.cbb_nomProjet.FormattingEnabled = true;
             this.cbb_nomProjet.Location = new System.Drawing.Point(108, 26);
             this.cbb_nomProjet.Name = "cbb_nomProjet";
-            this.cbb_nomProjet.Size = new System.Drawing.Size(488, 21);
+            this.cbb_nomProjet.Size = new System.Drawing.Size(184, 21);
             this.cbb_nomProjet.TabIndex = 28;
             // 
             // lbl_idContact
@@ -382,17 +286,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 445);
+            this.ClientSize = new System.Drawing.Size(646, 342);
             this.Controls.Add(this.grbRecherche_frmCont);
             this.Controls.Add(this.grbFiche_frmCont);
             this.Controls.Add(this.grbIntervention);
             this.Name = "frmCont";
             this.Text = "Form ancêtre contact";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmClos_frmCont);
-            this.grb_possibleInter.ResumeLayout(false);
-            this.grb_possibleInter.PerformLayout();
-            this.grb_statutProjet.ResumeLayout(false);
-            this.grb_statutProjet.PerformLayout();
             this.grbIntervention.ResumeLayout(false);
             this.grbIntervention.PerformLayout();
             this.grbFiche_frmCont.ResumeLayout(false);
@@ -410,11 +309,8 @@
         private System.Windows.Forms.Label lbl_telContact;
         private System.Windows.Forms.Label lbl_fonctionContact;
         private System.Windows.Forms.Label lbl_mailContact;
-        private System.Windows.Forms.Label lbl_nomProjet;
-        private System.Windows.Forms.Label lbl_dureeProjet;
+        private System.Windows.Forms.Label lbl_nomDocs;
         private System.Windows.Forms.Label lbl_dureeCumul;
-        private System.Windows.Forms.GroupBox grb_possibleInter;
-        private System.Windows.Forms.GroupBox grb_statutProjet;
         private System.Windows.Forms.Label lbl_idContact;
         protected System.Windows.Forms.GroupBox grbIntervention;
         protected System.Windows.Forms.GroupBox grbFiche_frmCont;
@@ -424,10 +320,6 @@
         private System.Windows.Forms.RadioButton rdb_nomContact_frmCont;
         protected System.Windows.Forms.GroupBox grbRecherche_frmCont;
         protected System.Windows.Forms.TextBox txt_fonctionContact;
-        protected System.Windows.Forms.RadioButton rdbOui_possibleInter;
-        protected System.Windows.Forms.RadioButton rdbNon_possibleInter;
-        protected System.Windows.Forms.RadioButton rdbOui_statutProjet;
-        protected System.Windows.Forms.RadioButton rdbNon_statutProjet;
         protected System.Windows.Forms.TextBox txtRech_frmListCont;
         protected System.Windows.Forms.ComboBox cbb_nomProjet;
         protected System.Windows.Forms.TextBox txt_prenomContact;
@@ -436,6 +328,5 @@
         protected System.Windows.Forms.TextBox txt_mailContact;
         protected System.Windows.Forms.TextBox txt_telContact;
         protected System.Windows.Forms.TextBox txt_dureeCumul;
-        protected System.Windows.Forms.TextBox txt_dureeProjet;
     }
 }

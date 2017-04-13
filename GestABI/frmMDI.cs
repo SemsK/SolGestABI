@@ -18,7 +18,7 @@ namespace GestABI
         }
         
         /// <summary>
-        /// Menu "Fenêtre/Clients/Liste" => Instancie un form "Liste des clients"
+        /// Menu Fenêtre/Clients/Liste : Instancie un form "Liste des clients"
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -30,7 +30,7 @@ namespace GestABI
         }
 
         /// <summary>
-        /// Menu "Fenêtre/Contacts/Ajouter" => Instancie un form "Ajouter un nouveau contact"
+        /// Menu Fenêtre/Contacts/Ajouter : Instancie un form "Ajouter un nouveau contact"
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -42,7 +42,7 @@ namespace GestABI
         }
 
         /// <summary>
-        /// Menu "Fenêtre/Contacts/Liste" => Instancie un form "Liste des contacts"
+        /// Menu Fenêtre/Contacts/Liste : Instancie un form "Liste des contacts"
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -54,7 +54,7 @@ namespace GestABI
         }
 
         /// <summary>
-        /// Menu "Fichier/Quitter" => Quitte l'application
+        /// Menu Fichier/Quitter : Quitte l'application
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -82,6 +82,11 @@ namespace GestABI
             { e.Cancel = true; };        // on annule l'événement en cours.
         }
 
+        /// <summary>
+        /// Menu ?/À Propos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsmAProposDe_Click(object sender, EventArgs e)
         {
                 /* Ouvre un objet de classe MessageBox, qui informe sur la conception et le dévellopement de l'application
@@ -91,7 +96,7 @@ namespace GestABI
         }
 
         /// <summary>
-        /// "Fenêtre/Clients/Ajouter" => Instancie un form "Ajouter un nouveau client"
+        /// Fenêtre/Clients/Ajouter : Instancie un form "Ajouter un nouveau client"
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

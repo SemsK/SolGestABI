@@ -85,7 +85,7 @@
             this.Controls.Add(this.btnAnnuModi);
             this.Controls.Add(this.btnSupp_frmDspClie);
             this.Name = "frmDspClie";
-            this.Text = "Affichage d\'un client";
+            this.Text = "Affichage / Modification d\'un client";
             this.Load += new System.EventHandler(this.frmDspClie_Load);
             this.Controls.SetChildIndex(this.grbFiche_frmClie, 0);
             this.Controls.SetChildIndex(this.grbRecherche_frmClie, 0);

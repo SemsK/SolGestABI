@@ -30,7 +30,6 @@
         {
             this.grbBoutons_NewCont = new System.Windows.Forms.GroupBox();
             this.btnOK_frmNewCont = new System.Windows.Forms.Button();
-            this.btnList_frmNewCont = new System.Windows.Forms.Button();
             this.btnQuit_frmNewCont = new System.Windows.Forms.Button();
             this.grbIntervention.SuspendLayout();
             this.grbFiche_frmCont.SuspendLayout();
@@ -45,18 +44,17 @@
             // grbBoutons_NewCont
             // 
             this.grbBoutons_NewCont.Controls.Add(this.btnOK_frmNewCont);
-            this.grbBoutons_NewCont.Controls.Add(this.btnList_frmNewCont);
             this.grbBoutons_NewCont.Controls.Add(this.btnQuit_frmNewCont);
-            this.grbBoutons_NewCont.Location = new System.Drawing.Point(349, 432);
+            this.grbBoutons_NewCont.Location = new System.Drawing.Point(415, 330);
             this.grbBoutons_NewCont.Name = "grbBoutons_NewCont";
-            this.grbBoutons_NewCont.Size = new System.Drawing.Size(280, 58);
+            this.grbBoutons_NewCont.Size = new System.Drawing.Size(214, 61);
             this.grbBoutons_NewCont.TabIndex = 46;
             this.grbBoutons_NewCont.TabStop = false;
             // 
             // btnOK_frmNewCont
             // 
             this.btnOK_frmNewCont.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK_frmNewCont.Location = new System.Drawing.Point(14, 20);
+            this.btnOK_frmNewCont.Location = new System.Drawing.Point(15, 21);
             this.btnOK_frmNewCont.Name = "btnOK_frmNewCont";
             this.btnOK_frmNewCont.Size = new System.Drawing.Size(75, 23);
             this.btnOK_frmNewCont.TabIndex = 34;
@@ -64,18 +62,9 @@
             this.btnOK_frmNewCont.UseVisualStyleBackColor = true;
             this.btnOK_frmNewCont.Click += new System.EventHandler(this.btnOK_frmNewCont_Click);
             // 
-            // btnList_frmNewCont
-            // 
-            this.btnList_frmNewCont.Location = new System.Drawing.Point(190, 20);
-            this.btnList_frmNewCont.Name = "btnList_frmNewCont";
-            this.btnList_frmNewCont.Size = new System.Drawing.Size(75, 23);
-            this.btnList_frmNewCont.TabIndex = 33;
-            this.btnList_frmNewCont.Text = "Liste";
-            this.btnList_frmNewCont.UseVisualStyleBackColor = true;
-            // 
             // btnQuit_frmNewCont
             // 
-            this.btnQuit_frmNewCont.Location = new System.Drawing.Point(102, 20);
+            this.btnQuit_frmNewCont.Location = new System.Drawing.Point(124, 21);
             this.btnQuit_frmNewCont.Name = "btnQuit_frmNewCont";
             this.btnQuit_frmNewCont.Size = new System.Drawing.Size(75, 23);
             this.btnQuit_frmNewCont.TabIndex = 38;
@@ -86,9 +75,10 @@
             // frmNewCont
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(646, 504);
+            this.ClientSize = new System.Drawing.Size(646, 403);
             this.Controls.Add(this.grbBoutons_NewCont);
             this.Name = "frmNewCont";
+            this.ShowInTaskbar = false;
             this.Text = "Ajouter un nouveau contact";
             this.Controls.SetChildIndex(this.grbIntervention, 0);
             this.Controls.SetChildIndex(this.grbFiche_frmCont, 0);
@@ -109,7 +99,6 @@
 
         private System.Windows.Forms.GroupBox grbBoutons_NewCont;
         private System.Windows.Forms.Button btnOK_frmNewCont;
-        private System.Windows.Forms.Button btnList_frmNewCont;
         private System.Windows.Forms.Button btnQuit_frmNewCont;
     }
 }

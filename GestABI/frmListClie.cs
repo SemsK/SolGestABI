@@ -15,10 +15,11 @@ namespace GestABI
         public frmListClie()
         {
             InitializeComponent();
+            afficheClientS();
         }
 
         /// <summary>
-        /// Filtre les clients affichés dans la DataGridView par noms
+        /// Filtre les clients affichés dans la DataGridView par nom, numéro ou activité
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -55,13 +56,13 @@ namespace GestABI
         /// <summary>
         /// Établit la source de données de la dataGridView et rafraîchit son affichage
         /// </summary>
-        private void afficheUnClient()
+        private void afficheClientS()
         {
-            DataTable dt = new DataTable();                                          // DataTable : Recopie les clients stockés en collection reliés au DataGridView pour n'afficher que les données choisies
-            DataRow dr;                                                              // Ligne de la datatable
-            Int32 i;                                                                 // Variable de boucle
+            DataTable dt = new DataTable();                                           // DataTable : Recopie les clients stockés en collection reliés au DataGridView pour n'afficher que les données choisies
+            DataRow dr;                                                               // Ligne de la datatable
+            Int32 i;                                                                  // Variable de boucle
 
-            dt.Columns.Add(new DataColumn("Raison Sociale", typeof(System.String)));            // Ajoute à la datatable 6 colonnes personnalisées
+            dt.Columns.Add(new DataColumn("Raison Sociale", typeof(System.String)));  // Ajoute à la datatable 6 colonnes personnalisées
             dt.Columns.Add(new DataColumn("Numéro", typeof(System.Int32)));
             dt.Columns.Add(new DataColumn("Activité", typeof(System.String)));
             dt.Columns.Add(new DataColumn("C.A.", typeof(System.Decimal)));
@@ -74,9 +75,9 @@ namespace GestABI
                 dr[0] = Donnees.ArrayClient[i].RaisonSociale;                             // Affectation des 6 colonnes
                 dr[1] = Donnees.ArrayClient[i].IdClient;
                 dr[2] = Donnees.ArrayClient[i].Activite;
-                dr[0] = Donnees.ArrayClient[i].CA;
-                dr[1] = Donnees.ArrayClient[i].Effectif;
-                dr[2] = Donnees.ArrayClient[i].Mail;
+                dr[3] = Donnees.ArrayClient[i].CA;
+                dr[4] = Donnees.ArrayClient[i].Effectif;
+                dr[5] = Donnees.ArrayClient[i].Mail;
                 dt.Rows.Add(dr);                                                      // Ajout de la ligne à la Datatable (la propriété Rows étant est elle-même une collection)
             }                                                                         // fin de boucle 
             this.grd_frmListClie.DataSource = dt.DefaultView;                                     // déterminer l'origine des données à afficher en DataGridView
@@ -86,7 +87,7 @@ namespace GestABI
         }
 
         /// <summary>
-        /// Bouton Ajouter un client ==> Ouvre et intancie le form NewClie
+        /// Bouton Ajouter un client : Ouvre et intancie le form NewClie
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -95,7 +96,7 @@ namespace GestABI
             frmNewClie frmNew = new frmNewClie();                                     // instancie un form de saisie de stagiaire et l'affiche en modal
             if (frmNew.ShowDialog() == DialogResult.OK)                               // si on sort de la saisie par OK  
             {
-                afficheUnClient();                                                    // régénère l'affichage du dataGridView  
+                afficheClientS();                                                    // régénère l'affichage du dataGridView  
             }
         }
 
@@ -106,14 +107,14 @@ namespace GestABI
         /// <param name="e"></param>
         private void grd_frmListClie_DoubleClick(object sender, EventArgs e)
         {
-            Int32 iStag;                                                              // rang du stagiaire dans la collection 
-            iStag = this.grd_frmListClie.CurrentRow.Index;                            // récupérer indice du stagiaire cliqué en DataGridView             
-            MSclient leClient = Donnees.ArrayClient[iStag];                           // instancier un objet stagiaire pointant vers le stagiaire d'origine dans la collection             
+            Int32 iClie;                                                              // rang du stagiaire dans la collection 
+            iClie = this.grd_frmListClie.CurrentRow.Index;                            // récupérer indice du stagiaire cliqué en DataGridView             
+            MSclient leClient = Donnees.ArrayClient[iClie];                           // instancier un objet stagiaire pointant vers le stagiaire d'origine dans la collection             
             frmDspClie frmDsp = new frmDspClie(leClient);                             // instancier un form détail pour ce stagiaire             
             DialogResult result = frmDsp.ShowDialog();                                // afficher le form détail en modal   
             if (result == DialogResult.OK)
             {
-                this.afficheUnClient();
+                this.afficheClientS();
             }
         }
     }

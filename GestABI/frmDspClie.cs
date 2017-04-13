@@ -19,7 +19,9 @@ namespace GestABI
         /// <param name="unClient"> la référence de l'objet MSclient à gérer dans ce form</param>
         public frmDspClie(MSclient unClient)
         {
-            this.leClient = unClient;                                         // Crée une référence d'objet client reçu en paramètre  
+            //unClient.RaisonSociale = Donnees.ArrayClient[frmListClie.iClie].RaisonSociale;
+
+            this.leClient = unClient;                                                 // Crée une référence d'objet client reçu en paramètre  
             InitializeComponent();
         }
 
@@ -35,7 +37,7 @@ namespace GestABI
         /// <param name="e"></param>
         private void frmDspClie_Load(object sender, EventArgs e)
         {
-            this.afficheClient(this.leClient);                                // Affiche le client
+            this.afficheClient(this.leClient);                                        // Affiche le client
         }
 
         /// <summary>

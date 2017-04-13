@@ -18,6 +18,8 @@ namespace GestABI
             this.grbFiche_frmClie.Location = new System.Drawing.Point(20, 14);
             this.grbBoutons_frmNewClie.Location = new System.Drawing.Point(386, 555);
             this.Height = 664;
+            // Incrémente automatiquement le numéro client
+            this.txt_idClient.Text = MSclient.compteurClient.ToString();
         }
 
         /// <summary>
@@ -30,7 +32,8 @@ namespace GestABI
             if (this.instancieClient())
             {   // Cas général : si l'instanciation client et son ajout à la collection est OK :
                 this.DialogResult = DialogResult.OK;                                // - Ferme de la boite de dialogue par validation
-            }
+                this.Close();
+            }     
         }
 
         /// <summary>
@@ -109,6 +112,7 @@ namespace GestABI
                 nouveauClient.CodeClient = base.txt_codeClient.Text;
                 nouveauClient.Ville = base.txt_ville.Text;                            // Conversion en MAJUSCULE
                 nouveauClient.CommClient = base.txt_commClient.Text;
+
                 Donnees.ArrayClient.Add(nouveauClient);
                 return true;
             }

@@ -15,7 +15,7 @@ namespace GestABI
         /// <summary>
         /// Nombre de contacts de la classe (public car partagé par toutes les instances).
         /// </summary>
-        public static Int32 Ncontact;
+        public static Int32 compteurContact = 0;
 
         /// <summary>
         /// Obtient le nom du contact forcé en MAJUSCULE.
@@ -96,57 +96,18 @@ namespace GestABI
         }
 
         /// <summary>
-        /// Obtient le nom du projet forcé en MAJUSCULE.
+        /// Obtient le nom du document forcé en MAJUSCULE.
         /// </summary>
-        private String nomProjet;
+        private String nomDoc;
         /// <summary>
         /// Nom du projet ALPHANUMÉRIQUE ; le service commercial devra rentrer uniquement des chiffres ou des lettres.
         /// </summary>
-        public String NomProjet
+        public String NomDoc
         {
-            get { return this.nomProjet; }
-            set { this.nomProjet = value.Trim().ToUpper(); } // Met le nom du Projet en majuscule.
+            get { return this.nomDoc; }
+            set { this.nomDoc = value.Trim().ToUpper(); } // Met le nom du Projet en majuscule.
         }
-
-        /// <summary>
-        /// Obtient la réponse de la question "Le contact est-il un intervenant?"
-        /// </summary>
-        private String possibleInter;
-        /// <summary>
-        /// Réponse à question par "Oui" ou "Non" ; Choix effectué par RadioBouton
-        /// </summary>
-        public String PossibleInter
-        {
-            get { return possibleInter; }
-            set { possibleInter = value; }
-        }
-
-        /// <summary>
-        /// Obtient la réponse de la question "Le projet est-il encore en cours ?"
-        /// </summary>
-        private String statutProjet;
-        /// <summary>
-        /// Réponse à la question par "Oui" ou "Non" ; Choix effectué par RadioBouton
-        /// </summary>
-        public String StatutProjet
-        {
-            get { return statutProjet; }
-            set { statutProjet = value; }
-        }
-
-        /// <summary>
-        /// Obtient le nombre d'heures effectuées sur un projet.
-        /// </summary>
-        private Int32 dureeProjet;
-        /// <summary>
-        /// Nombre d'heures effectuées NUMÉRIQUE ; le service commercial devra rentrer uniquement des chiffres.
-        /// </summary>
-        public Int32 DureeProjet
-        {
-            get { return dureeProjet; }
-            set { dureeProjet = value; }
-        }
-
+        
         /// <summary>
         /// Obtient le nombre d'heures d'intervention cumulées par un contact.
         /// </summary>

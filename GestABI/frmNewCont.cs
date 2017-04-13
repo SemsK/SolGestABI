@@ -17,8 +17,8 @@ namespace GestABI
             // afin d'éviter un vide laissé par le groupebox "Recherche" devenu invisible. 
             this.grbFiche_frmCont.Location = new System.Drawing.Point(18, 12);
             this.grbIntervention.Location = new System.Drawing.Point(18, 165);
-            this.grbBoutons_NewCont.Location = new System.Drawing.Point(349, 345);
-            this.Height = 456;
+            this.grbBoutons_NewCont.Location = new System.Drawing.Point(415, 243);
+            this.Height = 355;
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace GestABI
             {
                 if (this.instancie())
                 {   // Cas général : si l'instanciation stagiaire et son ajout à la collection est OK :
-                    MScontact.Ncontact += 1;                                        // - incrémentation compteurs de stagiaires
+                    MScontact.compteurContact += 1;                                 // - incrémentation compteurs de stagiaires
                     this.DialogResult = DialogResult.OK;                            // - fermeture de la boite de dialogue par validation
                 }
             }
@@ -52,6 +52,12 @@ namespace GestABI
                 code = false;
                 MessageBox.Show("le numéro du contact saisi n'est pas un entier valide", "ERREUR");
             }
+            if (!(estEntier(this.txt_dureeCumul.Text)))                              // appel fonction générique de contrôle  
+            {                                                                       // la chaîne reçue n'est pas convertible          
+                code = false;
+                MessageBox.Show("le nombre d'heures saisi n'est pas un entier valide", "ERREUR");
+            }
+
             return code;
         }
 
@@ -97,14 +103,14 @@ namespace GestABI
             try
             {
                 // affecter les données de l'objet MStagiaire : variables simples, ou propriétés ce qui déclenche alors le code des méthodes set
-                nouveauContact.NomContact = base.txt_nomContact.Text;                           // Avec conversion en MAJ    
-                nouveauContact.PrenomContact = base.txt_prenomContact.Text;                     // Avec conversion en min 
-                nouveauContact.IdContact = Int32.Parse(base.txt_idContact.Text.Trim());         // Conversion idContact saisi en textbox       
-                nouveauContact.FonctionContact = base.txt_fonctionContact.Text;                 // Avec conversion en MAJ  
-                nouveauContact.TelContact = base.txt_telContact.Text;                           
-                nouveauContact.MailContact = base.txt_mailContact.Text;                         // Avec controle de saisie 
-                nouveauContact.DureeCumul = Int32.Parse(base.txt_mailContact.Text.Trim());
-                Donnees.ArrayContact.Add(nouveauContact);                                       // Ajouter la référence d'objet MStagiaire dans la collection                 
+                nouveauContact.NomContact = txt_nomContact.Text;                           // Avec conversion en MAJ    
+                nouveauContact.PrenomContact = txt_prenomContact.Text;                     // Avec conversion en min 
+                nouveauContact.IdContact = Int32.Parse(txt_idContact.Text.Trim());                // Conversion idContact saisi en textbox       
+                nouveauContact.FonctionContact = txt_fonctionContact.Text;                 // Avec conversion en MAJ  
+                nouveauContact.TelContact = txt_telContact.Text;                           
+                nouveauContact.MailContact = txt_mailContact.Text;                         // Avec controle de saisie 
+                nouveauContact.DureeCumul = Int32.Parse(txt_dureeCumul.Text.Trim());             // Conversion idContact saisi en textbox 
+                Donnees.ArrayContact.Add(nouveauContact);                                  // Ajouter la référence d'objet MStagiaire dans la collection                 
                 return true;
             }
             catch (Exception ex)

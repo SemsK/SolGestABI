@@ -15,7 +15,7 @@ namespace GestABI
         /// <summary>
         /// Nombre de clients de la classe (public car partagé par toutes les instances).
         /// </summary>
-        public static Int32 Nclient;
+        public static Int32 compteurClient = 0;
 
         /// <summary>
         /// Obtient la raison sociale du client.
@@ -195,17 +195,19 @@ namespace GestABI
                 }
                 }
         }
+
         /// <summary>
         /// Obtient la ville du client forcée en MAJUSCULE.
         /// </summary>
+        /// 
         private String ville;
         /// <summary>
         /// Ville du client ALPHABÉTIQUE ; le service commercial devra rentrer uniquement des lettres.
         /// </summary>
         public String Ville
         {
-            get { return ville; }
-            set { ville = value.Trim().ToUpper(); } // Met la ville du client en majuscule.
+            get { return this.ville; }
+            set { this.ville = value.Trim().ToUpper(); } // Met le nom de la ville en majuscule.
         }
 
         /// <summary>

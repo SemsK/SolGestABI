@@ -117,14 +117,14 @@
             // tsmAjouter_clients
             // 
             this.tsmAjouter_clients.Name = "tsmAjouter_clients";
-            this.tsmAjouter_clients.Size = new System.Drawing.Size(152, 22);
+            this.tsmAjouter_clients.Size = new System.Drawing.Size(113, 22);
             this.tsmAjouter_clients.Text = "Ajouter";
             this.tsmAjouter_clients.Click += new System.EventHandler(this.tsmAjouter_clients_Click);
             // 
             // tsmListe_clients
             // 
             this.tsmListe_clients.Name = "tsmListe_clients";
-            this.tsmListe_clients.Size = new System.Drawing.Size(152, 22);
+            this.tsmListe_clients.Size = new System.Drawing.Size(113, 22);
             this.tsmListe_clients.Text = "Liste";
             this.tsmListe_clients.Click += new System.EventHandler(this.tsmListe_clients_Click);
             // 
