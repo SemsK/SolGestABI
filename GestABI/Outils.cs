@@ -454,12 +454,40 @@ namespace GestABI
         }
         
         /// <summary>
-        /// Vérifie la vraissemblance de la saisie du champ "Mail" du contact.
+        /// Vérifie la vraissemblance de la saisie du champ "Documents" du contact.
         /// </summary>
         /// <param name="S"></param>
         /// <returns></returns>
-        public static bool Est_MailContact_OK(String S)
+        public static bool Est_Documents_OK(String S)
         {
+            Boolean code = true;
+            if (S.Length > 500)
+            {
+                code = false;
+            }
+            return code;
+        }
+
+        public static bool Est_DureeCumul_OK(String S)
+        {
+            Char c;
+            Boolean code = true;
+            if (S.Length < 5 && S.Length > 0)
+            {
+                for (int i = 0; i < S.Length; i++)
+                {
+                    c = S[i];
+                    if (!(Char.IsDigit(c)))
+                    {
+                        code = false;                // Détecte une erreur
+                    }
+                }                                    // Fin de boucle
+            }
+            else
+            {
+                code = false;                        // Détecte une erreur si il y a plus de 5 caractères
+            }
+            return code;
         }
     }
 }
