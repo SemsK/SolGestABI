@@ -13,9 +13,9 @@ namespace GestABI
     public class ClasseClient
     {
         /// <summary>
-        /// Nombre de clients de la classe (public car partagé par toutes les instances).
+        /// Nombre de clients de la classe (public static car partagé par toutes les instances).
         /// </summary>
-        public static Int32 compteurClient = 0;
+        public static Int32 compteurClient = 1;
 
         /// <summary>
         /// Obtient la raison sociale du client.

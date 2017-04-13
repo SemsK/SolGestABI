@@ -38,7 +38,7 @@ namespace GestABI
             {
                 //Affecte les données de l'objet ClasseClient : Variables ou propriétés qui déclenche les méthodes get/set
                 nouveauClient.IdClient = ClasseClient.compteurClient;
-                nouveauClient.RaisonSociale = base.txt_raisonSociale.Text;                // Conversion en MAJUSCULE
+                nouveauClient.RaisonSociale = base.txt_raisonSociale.Text;                 // Conversion en MAJUSCULE
                 nouveauClient.TypeClient = cbb_typeSociete.Text;
                 nouveauClient.Activite = base.txt_activite.Text;
                 nouveauClient.CA = Decimal.Parse(base.txt_cA.Text.Trim());
@@ -49,7 +49,7 @@ namespace GestABI
                 nouveauClient.Mail = base.txt_mail.Text;
                 nouveauClient.Adresse = base.txt_adresse.Text;
                 nouveauClient.CodeClient = base.txt_codeClient.Text;
-                nouveauClient.Ville = base.txt_ville.Text;                               // Conversion en MAJUSCULE
+                nouveauClient.Ville = base.txt_ville.Text;                                 // Conversion en MAJUSCULE
                 nouveauClient.CommClient = base.txt_commClient.Text;
                 Donnees.ArrayClient.Add(nouveauClient);
                 return true;
@@ -70,7 +70,29 @@ namespace GestABI
         private Boolean Est_Saisie_OK()
         {
             bool correct = true;
-            if (!Outils.Est_RaisonSociale_OK(this.txt_raisonSociale.Text.Trim))
+
+            if (!Outils.Est_RaisonSociale_OK(this.txt_raisonSociale.Text.Trim()))         // Appelle la méthode instaurée dans Outils
+            {
+                errorProvider_NewClie.SetError(this.txt_raisonSociale, "Raison sociale invalide!");
+                correct = false;
+            }
+            else
+            {
+                errorProvider_NewClie.SetError(this.txt_raisonSociale, String.Empty);
+            }
+
+            if  (this.cbb_nature.Text == "")                                             // Vérifie qu'un choix a été fait pour la Nature
+            {
+                errorProvider_NewClie.SetError(this.cbb_nature, "Nature du client requise!");
+                correct = false;
+            }
+            else
+            {
+                errorProvider_NewClie.SetError(this.cbb_nature, String.Empty);
+            }
+
+
+
         }
 
 
