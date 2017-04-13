@@ -20,5 +20,6 @@ namespace GestABI
         /// Collection d'objets MContact
         /// </summary>
         public static List<MScontact> ArrayContact = new List<MScontact>();
+
     }
 }
