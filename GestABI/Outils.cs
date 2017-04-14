@@ -296,7 +296,7 @@ namespace GestABI
         {
             Char c;
             Boolean code = true;
-            if (S.Length < 5 && S.Length > 0)
+            if (S.Length == 5)
             {
                 for (int i = 0; i < S.Length; i++)
                 {
@@ -402,7 +402,7 @@ namespace GestABI
         /// </summary>
         /// <param name="S"></param>
         /// <returns></returns>
-        public static bool Est_FonctionContact_OK(String S)
+        public static bool Est_Fonction_OK(String S)
         {
             Int32 i;
             Char c;

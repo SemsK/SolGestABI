@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grbBoutons_NewCont = new System.Windows.Forms.GroupBox();
             this.btnOK_frmNewCont = new System.Windows.Forms.Button();
             this.btnQuit_frmNewCont = new System.Windows.Forms.Button();
+            this.errorProvider_NewCont = new System.Windows.Forms.ErrorProvider(this.components);
             this.grbIntervention.SuspendLayout();
             this.grbFiche_frmCont.SuspendLayout();
             this.grbRecherche_frmCont.SuspendLayout();
             this.grbBoutons_NewCont.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_NewCont)).BeginInit();
             this.SuspendLayout();
             // 
             // grbRecherche_frmCont
@@ -72,6 +75,10 @@
             this.btnQuit_frmNewCont.UseVisualStyleBackColor = true;
             this.btnQuit_frmNewCont.Click += new System.EventHandler(this.btnQuit_frmNewCont_Click);
             // 
+            // errorProvider_NewCont
+            // 
+            this.errorProvider_NewCont.ContainerControl = this;
+            // 
             // frmNewCont
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,6 +98,7 @@
             this.grbRecherche_frmCont.ResumeLayout(false);
             this.grbRecherche_frmCont.PerformLayout();
             this.grbBoutons_NewCont.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_NewCont)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -100,5 +108,6 @@
         private System.Windows.Forms.GroupBox grbBoutons_NewCont;
         private System.Windows.Forms.Button btnOK_frmNewCont;
         private System.Windows.Forms.Button btnQuit_frmNewCont;
+        private System.Windows.Forms.ErrorProvider errorProvider_NewCont;
     }
 }

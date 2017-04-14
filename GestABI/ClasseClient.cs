@@ -170,30 +170,7 @@ namespace GestABI
         public String CodeClient
         {
             get { return codeClient; }
-            set { // Le service commercial doit fournir un code postal à 5 chiffres
-                Int32 i ;                  // Variable de boucle
-                Boolean erreur = false;   // indicateur d'erreur
-                if (value.Length ==5)     // 5 caractères attendus : OK => Controle alors un à un 
-                {
-                    for (i = 0; i< value.Length; i++) // Controle les chiffres par boucle
-                    {
-                        if (!(Char.IsDigit(value[i])))   
-                        { erreur = true; }
-                    } // Fin de boucle du contrôle des chiffres
-                    if (erreur)       // On a rencontré un non-chiffre             
-                    {                 // Avertissement par messagebox          
-                        System.Windows.Forms.MessageBox.Show(value.ToString() + "\n" + "n'est pas un code postal valide : uniquement des chiffres", "Erreur Classe MClient", System.Windows.Forms.MessageBoxButtons.OK);
-                    }
-                    else
-                    {
-                        codeClient = value;  // Tout est bon, on affecte la propriété
-                    }
-                }
-                else  // Il n'y a pas 5 caractères : Avertissement par messagebox
-                {             
-                    System.Windows.Forms.MessageBox.Show(value.ToString() + "\n" + "n'est pas un code postal valide : 5 chiffres, pas plus, pas moins", "Erreur Classe MClient", System.Windows.Forms.MessageBoxButtons.OK);
-                }
-                }
+            set { codeClient = value; }
         }
 
         /// <summary>

@@ -48,7 +48,7 @@ namespace GestABI
         {
             this.txt_raisonSociale.Text = unClient.RaisonSociale;                     //Affecte les textbox
             this.txt_idClient.Text = unClient.IdClient.ToString();
-            this.cbb_typeSociete.Text = unClient.TypeClient;
+            this.cbb_type.Text = unClient.TypeClient;
             this.txt_activite.Text = unClient.Activite;
             this.txt_cA.Text = unClient.CA.ToString();
             this.cbb_nature.Text = unClient.Nature;
@@ -81,7 +81,7 @@ namespace GestABI
         {
             leClient.RaisonSociale = base.txt_raisonSociale.Text;
             leClient.IdClient = Int32.Parse(base.txt_idClient.Text.Trim());
-            leClient.TypeClient = cbb_typeSociete.Text;
+            leClient.TypeClient = cbb_type.Text;
             leClient.Activite = base.txt_activite.Text;
             leClient.CA = Decimal.Parse(base.txt_cA.Text.Trim());
             leClient.Nature = cbb_nature.Text;

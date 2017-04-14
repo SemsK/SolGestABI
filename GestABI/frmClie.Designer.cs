@@ -43,7 +43,7 @@
             this.cbb_nomContact_frmClie = new System.Windows.Forms.ComboBox();
             this.cbb_nature = new System.Windows.Forms.ComboBox();
             this.txt_codeClient = new System.Windows.Forms.TextBox();
-            this.cbb_typeSociete = new System.Windows.Forms.ComboBox();
+            this.cbb_type = new System.Windows.Forms.ComboBox();
             this.txt_telephone = new System.Windows.Forms.TextBox();
             this.txt_cA = new System.Windows.Forms.TextBox();
             this.txt_activite = new System.Windows.Forms.TextBox();
@@ -237,7 +237,7 @@
             this.grbFiche_frmClie.Controls.Add(this.cbb_nomContact_frmClie);
             this.grbFiche_frmClie.Controls.Add(this.cbb_nature);
             this.grbFiche_frmClie.Controls.Add(this.txt_codeClient);
-            this.grbFiche_frmClie.Controls.Add(this.cbb_typeSociete);
+            this.grbFiche_frmClie.Controls.Add(this.cbb_type);
             this.grbFiche_frmClie.Controls.Add(this.txt_telephone);
             this.grbFiche_frmClie.Controls.Add(this.txt_cA);
             this.grbFiche_frmClie.Controls.Add(this.txt_activite);
@@ -296,17 +296,17 @@
             this.txt_codeClient.Size = new System.Drawing.Size(188, 20);
             this.txt_codeClient.TabIndex = 49;
             // 
-            // cbb_typeSociete
+            // cbb_type
             // 
-            this.cbb_typeSociete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_typeSociete.FormattingEnabled = true;
-            this.cbb_typeSociete.Items.AddRange(new object[] {
+            this.cbb_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_type.FormattingEnabled = true;
+            this.cbb_type.Items.AddRange(new object[] {
             "Public",
             "Privee"});
-            this.cbb_typeSociete.Location = new System.Drawing.Point(119, 106);
-            this.cbb_typeSociete.Name = "cbb_typeSociete";
-            this.cbb_typeSociete.Size = new System.Drawing.Size(188, 21);
-            this.cbb_typeSociete.TabIndex = 46;
+            this.cbb_type.Location = new System.Drawing.Point(119, 106);
+            this.cbb_type.Name = "cbb_type";
+            this.cbb_type.Size = new System.Drawing.Size(188, 21);
+            this.cbb_type.TabIndex = 46;
             // 
             // txt_telephone
             // 
@@ -453,7 +453,7 @@
         protected System.Windows.Forms.TextBox txt_codeClient;
         protected System.Windows.Forms.ComboBox cbbRech_frmListClie;
         protected System.Windows.Forms.ComboBox cbb_nature;
-        protected System.Windows.Forms.ComboBox cbb_typeSociete;
+        protected System.Windows.Forms.ComboBox cbb_type;
         protected System.Windows.Forms.ComboBox cbb_nomContact_frmClie;
     }
 }
